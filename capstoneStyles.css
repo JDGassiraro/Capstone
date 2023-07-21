@@ -1,3 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital@0;1&display=swap');
+
 * {
     border: 1px dashed black;
+    font-family: 'Sansita', sans-serif;
+}
+
+header, footer{
+    background-color: #14110f;
+    font-family: 'Sansita', sans-serif;
+}
+
+footer{
+    color: #a4c2a5;
+    padding-left: 43%;
+}
+
+body{
+    background-color: #d8dad3;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px 8px;
+}
+
+.nav-ul li{
+    list-style: none;
+    background-color:#a4c2a5;
+    text-align: center;
+    font-family: 'Roboto-slab', sans-serif;
+}
+
+.nav-logo{
+    width: 120px;
+}
+.nav-ul a{
+    list-style: none;
+    text-decoration: none;
+    color: #14110f;
+    font-family: 'Roboto-slab', sans-serif;
+}
+
+.carousel-section{
+    margin: 5%
+}
+
+.carousel-games{
+    display: flex;
+    max-width: 90%;
+    margin: 5%;
+    padding: 1%;
+}
+
+.carousel-image{
+    margin: 5px;
+}
+
+.game-section{
+    max-width: 90%;
+    margin: 5%
+}
+
+.game-section-header{
+    padding: 2px;
+    color:  #387780;;
+}
+
+.game-section-list {
+ display: flex;
+ align-items: flex-start;
+ margin: 5px 0px 5px 5px;;
+}
+
+.game-list-section a, img{
+    display: flex;
 }
