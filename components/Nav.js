@@ -1,9 +1,10 @@
 import html from "html-literal";
-
+import logoURL from "../images/logoDesigns/workingLogo.png";
+console.log(logoURL);
 export default (links) => html ` <nav>
 <i class="fas fa-bars"></i>
 <ul class="nav-ul hidden--mobile nav-links">
-    <li><a href="home.html"><img class="nav-logo" src="images/logoDesigns/workingLogo.png" alt="logo"></a></li>
+    <li><a href="home.html"><img class="nav-logo" src= "${logoURL}" alt="logo"></a></li>
     <li><a href="gameList.html">Games</a></li>
     <li><a href="multiplayer.html">Multiplayer</a></li>
     <li><a href="aboutUs.html">About Us</a></li>

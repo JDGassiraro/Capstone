@@ -2,7 +2,7 @@ import html from "html-literal";
 
 export default () => html`
 <!--Carousel Bar-->
-<div class="carousel-section">
+<div>
     <h3 class="game-section-header">Featured Games</h3>
     <div class="carousel-games">
         <a href="gameSpecific.html"><img class="carousel-image" alt="game image"></a>

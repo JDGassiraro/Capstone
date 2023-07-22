@@ -1,8 +1,15 @@
+import Navigo from "navigo";
+import {capitalize} from "lodash";
+import { Header, Nav, Main, Footer } from "./components";
+import * as store from "./store";
+
+const router = new Navigo("/");
+
 function render(state = store.Home) {
   document.querySelector("#root").innerHTML = `
     ${Header(state)}
     ${Nav(store.Links)}
-    ${Main(state)}
+    <div id = "container">${Main(state)}</div>
     ${Footer()}
   `;
   afterRender(state);
