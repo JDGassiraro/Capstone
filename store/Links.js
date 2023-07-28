@@ -1,8 +1,9 @@
 export default [
-  { title: "Contactus", text: "Contact" },
-  { title: "Gamelist", text: "Games" },
-  { title: "Gamespecific", text: "Specific Game" },
   { title: "Home", text: "Home" },
+  { title: "Gamelist", text: "Games" },
+  { title: "Multiplayer", text: "Multiplayer" },
+  { title: "Contactus", text: "Contact" },
+  { title: "Gamespecific", text: "Specific Game" },
   { title: "Lessonplanner", text: "Lesson Planner" },
-  { title: "Multiplayer", text: "Multiplayer" }
+  { title: "Aboutus", text: "About Us" }
 ];

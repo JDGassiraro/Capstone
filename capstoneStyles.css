@@ -56,12 +56,17 @@ body{
     font-family: 'Roboto-slab', sans-serif;
 }
 
-.carousel-games{
-    display: flex;
+.grid-games-section{
+    margin-bottom: 1%;
+}
+
+.grid-games{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     padding: 1%;
 }
 
-.carousel-image{
+.grid-image{
     margin: 5px;
 }
 
@@ -71,7 +76,7 @@ body{
 
 .game-section-header{
     padding: 2px;
-    color:  #387780;;
+    color:  #387780;
 }
 
 .game-section-list {
@@ -88,4 +93,50 @@ body{
     flex-shrink: 0;
     aspect-ratio: 16/9;
     width: calc(20% - var(--game-list-gap));
+}
+
+#about-us-h1{
+    text-align: center;
+    color:  #387780;
+}
+
+#mission-statement{
+    text-align: center;
+}
+
+#text-organizer{
+    display: flex;
+    margin-top: 1%;
+    justify-content: center;
+    text-align: center;
+}
+
+#text-organizer h2{
+    color:  #387780;
+}
+
+#text-organizer div{
+    max-width: 50%;
+    padding: .5%;
+}
+
+#text-organizer p{
+    padding: .7%;
+}
+
+#form-format{
+}
+
+.form-field{
+    display: block;
+    margin: 2%;
+}
+
+#contact-input-section{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-button{
+    margin: 1%;
 }
