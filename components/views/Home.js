@@ -1,6 +1,6 @@
 import html from "html-literal";
 
-export default () => html`
+export default (state) => html`
 <!--Grid Bar-->
 <div class="grid-games-section">
     <h3 class="game-section-header">Featured Games</h3>
@@ -55,7 +55,9 @@ export default () => html`
         <a href="Gamespecific"><img alt="game image"></a>
         <a href="Gamespecific"><img alt="game image"></a>
     </div>
-</div>`;
-// </h3><h3>
-// The weather in ${state.weather.city} is ${state.weather.description}. Temperature is ${state.weather.temp}F, and it feels like ${state.weather.feelsLike}F.
-// </h3>
+</div>
+<h3>
+The weather in ${state.weather.city} is ${state.weather.description}. Temperature is ${state.weather.temp}F, and it feels like ${state.weather.feelsLike}F.
+</h3>
+`;
+
