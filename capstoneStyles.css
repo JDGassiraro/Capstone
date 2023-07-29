@@ -163,11 +163,16 @@ body{
 }
 
 #form-format{
+    /*not needed yet*/
 }
 
 .form-field{
     display: block;
     margin: 2%;
+}
+
+.textarea-above{
+    vertical-align: top;
 }
 
 #contact-input-section{
