@@ -7,7 +7,7 @@ export default () => html `<h1>
       <img class="banner-image" alt="banner image">
 </div>
       <img class="banner-image" alt="banner image">
-      <label for="feedback">Feedback Type</label>
+      <label for="feedback">Select Cirriculum Week:</label>
                         <select name="feedback" id="feedback">
                               <option value="click-here">Click Here</option>
                               <option value="game-pitch">Game Pitch</option>

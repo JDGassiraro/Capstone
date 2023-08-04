@@ -19,8 +19,8 @@ export default (links) => html ` <nav>
     <li><a href="lessonPlanner.html">Lesson Planner</a></li>
     <li>Search Bar Here</li> -->
     <div class="search-div">
-        <label class="nav-search" for="nav-search">Search the site:</label>
-        <input class="search-field" type="search" id="nav-search" name="qu" maxlength = 30>
+        <label class="nav-search" for="nav-search"></label>
+        <input class="search-field" type="search" id="nav-search" placeholder="Search the Site" name="qu" maxlength = 30>
         <input class="search-button" type="button" value="Search">
     </div>
 </ul>

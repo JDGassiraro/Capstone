@@ -30,6 +30,10 @@ body{
     padding: 5%;
 }
 
+.hidden{
+    display: none !important;
+}
+
 .nav-ul {
     display: flex;
     justify-content: center;
@@ -43,6 +47,12 @@ body{
     list-style: none;
     background-color:#a4c2a5;
     font-family: 'Roboto-slab', sans-serif;
+    padding: 1%;
+    border-radius: 15%;
+}
+
+.nav-ul li:first-child{
+    padding: 0%;
 }
 
 .nav-ul li:hover{
@@ -58,7 +68,7 @@ body{
 .nav-li{
     width: 12%;
 }
-.nav-ul a{
+.nav-ul a{;
     list-style: none;
     text-decoration: none;
     color: #14110f;
@@ -93,6 +103,7 @@ body{
     background-color:#cbddcb;
 }
 
+/*Game Grid classes*/
 .grid-games-section{
     margin-bottom: 1%;
 }
@@ -104,10 +115,13 @@ body{
 }
 
 .grid-image{
-    margin: 5px;
-    aspect-ratio: 16/9;
+    margin: 0%;
+    padding: 0%;
+    grid-gap: 10%;
+    object-fit: cover;
 }
 
+/*Game Flex  Classes*/
 .game-section{
     /* max-width: 90%; */
 }
@@ -133,6 +147,7 @@ body{
     width: calc(20% - var(--game-list-gap));
 }
 
+/*About Us Classes*/
 #about-us-h1{
     text-align: center;
     color:  #387780;
@@ -149,6 +164,28 @@ body{
     text-align: center;
 }
 
+.au-buttons{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin:  0%;
+    padding: 1%;
+}
+
+.au-buttons button{
+    border-style: none;
+    margin: 1%;
+    padding: 1%;
+    min-width: 5%;
+    border-radius: 20%;
+    background-color:#a4c2a5;
+}
+
+.au-buttons button:hover{
+    cursor: pointer;
+    background-color:#cbddcb;
+}
+
 #text-organizer h2{
     color:  #387780;
 }
@@ -162,6 +199,17 @@ body{
     padding: .7%;
 }
 
+#aus-paragraph{
+    --au-paragraph-display: none;
+   display: var(--au-paragraph-display);
+}
+
+#aue-paragraph{
+    --au-paragraph-display: none;
+    display: var(--au-paragraph-display);
+}
+
+/*Contact Us Classes*/
 #form-format{
     /*not needed yet*/
 }
@@ -182,4 +230,38 @@ body{
 
 #contact-button{
     margin: 1%;
+}
+
+@media (max-width: 549px){
+    .hidden--mobile {
+      display: none !important;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    nav > i {
+        padding: 1%;
+        font-size:2em;
+    }
+
+    nav > ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 0;
+    }
+
+    .nav-ul li:first-child{
+        display: none;
+    }
+}
+
+@media (min-width: 550px){
+    nav > .fa-bars {
+        display: none;
+      }
 }
