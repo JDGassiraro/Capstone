@@ -33,7 +33,7 @@ export default () => html `<h1>
       </div>
 
       <div class="form-field">
-            <label for="msg">Write your message here:</label>
+            <label class="textarea-above" for="msg">Write your message here:</label>
             <textarea name="msg" id="msg" cols="40" rows="10"></textarea>
       </div>
 
