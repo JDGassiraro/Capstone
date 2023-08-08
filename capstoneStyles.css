@@ -34,12 +34,17 @@ body{
     display: none !important;
 }
 
+nav{
+    background-color: #14110f;
+    border-bottom: 5px solid #a4c2a5;
+}
+
 .nav-ul {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1em;
-    margin: 10px;
+    margin: 0px;
     padding: 10px 8px;
 }
 
@@ -228,8 +233,64 @@ body{
     flex-direction: column;
 }
 
+.file-button{
+    display: center;
+    padding: 1%;
+}
+
 #contact-button{
     margin: 1%;
+}
+
+/*Lesson Planner Page*/
+
+.lp-dropdown{
+    display: flex;
+    justify-content: center;
+    padding: .3%;
+}
+
+.lp-result-info{
+    display: flex;
+}
+
+/*Game Specific Page*/
+
+
+.gs-image-div{
+    display:flex;
+    justify-content: center;
+    margin-bottom: .5%;
+}
+
+#gs-image{
+    min-width: 40%;
+    max-width: 75%;
+    background-color: rebeccapurple;
+}
+
+#gs-order{
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5%;
+}
+
+.gs-order-small{
+    display: block;
+    margin: .2%;
+    padding: .5%;
+}
+
+.gs-order-small > h3, p{
+    padding: .5%;
+}
+
+.comment-button{
+    padding: .2%
+}
+
+.comment-button:hover{
+    cursor: pointer;
 }
 
 @media (max-width: 549px){
@@ -257,6 +318,10 @@ body{
 
     .nav-ul li:first-child{
         display: none;
+    }
+
+    #gs-order{
+        display: block;
     }
 }
 

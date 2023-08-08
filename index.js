@@ -20,10 +20,23 @@ function render(state = store.Home) {
 function afterRender(state){
   // add menu toggle to bars icon in nav bar
   document.querySelector(".fa-bars").addEventListener("click", () => {
-  document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+  document.querySelector("nav > ul").classList.toggle("hidden--mobile")
+  }),
 
-  //add or remove paragraphs in the About Us Page
-});
+  //add or remove paragraphs in the About Us Page w/Student Button
+  document.querySelector("#student-button").addEventListener("click", () => {
+  document.querySelector("#text-organizer > div:first-child").classList.toggle("hidden");
+  })
+
+  //add or remove paragraphs in the About Us Page w/Student Button
+  document.querySelector("#educator-button").addEventListener("click", () => {
+  document.querySelector("#text-organizer > div:last-child").classList.toggle("hidden");
+  })
+
+  //add comment button under game specific game page when typing a comment.
+    document.querySelector(".gs-order-small > textarea").addEventListener("click",() => {
+    document.querySelector(".gs-order-small > .comment-button").classList.toggle("hidden");
+  })
 }
 
 router.hooks({

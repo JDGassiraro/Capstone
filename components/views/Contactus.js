@@ -13,7 +13,7 @@ export default () => html `<h1>
 
       <div class="form-field">
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="you@somewhere.com"/>
+            <input type="email" name="email" id="email" placeholder="you@somewhere.com" required/>
       </div>
 
       <div class="form-field">
@@ -38,7 +38,8 @@ export default () => html `<h1>
       </div>
 
       <div id="contact-input-section">
-            <input type="button" value="Attachments (optional)"/>
+            <label for="attachements"></label>
+            <input type="file" class="file-button" id ="attachements" name="attachements" accept=".pdf, .doc, .docx, .jpg, .jpeg" multiple/>
 
             <input type="submit" id="contact-button" value="Submit"/>
       </div>

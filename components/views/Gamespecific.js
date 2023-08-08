@@ -1,13 +1,38 @@
 import html from "html-literal";
+import stockURL from "/images/gameImages/diverUnderwater.jpg";
 
 export default () => html `
 <h1>Game Specific Page</h1>
 <!--Game Image-->
-<img>
+
+<div class="gs-image-div">
+    <img id="gs-image" src="${stockURL}" alt="Game Image">
+</div>
 
 <!--Game Information-->
-<div>
+<div id="gs-order">
 
+    <div class="gs-order-small">
+        <div class="gs-order-small">
+            <h3>Number of Plays</h3>
+            <p>Number of Plays</p></div>
+        <div class="gs-order-small">
+            <h3>Published</h3>
+            <p>Date Published</p>
+        </div>
+    </div>
+
+    <div class="gs-order-small">
+        <h3>Most Recent Update and Date</h3>
+        <p>Most  Recent Update Information</p>
+    </div>
+
+    <div class="gs-order-small">
+        <h3>Comments</h3>
+        <label class="textarea-above" for="comments"></label>
+        <textarea name="comments" id="comments" cols="40" rows="10"></textarea>
+        <input type="submit" class="comment-button hidden" name="comments" value="Comment">
+    </div>
 </div>
 
 <!--Similar Games-->

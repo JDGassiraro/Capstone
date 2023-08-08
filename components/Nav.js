@@ -24,4 +24,4 @@ export default (links) => html ` <nav>
         <input class="search-button" type="button" value="Search">
     </div>
 </ul>
-</nav>`
+</nav>`;
