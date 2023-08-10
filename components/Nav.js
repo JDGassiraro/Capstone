@@ -8,7 +8,7 @@ export default (links) => html ` <nav>
     ${links
         .map(
         (link) =>
-            `<li><a href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a></li>`
+            html `<li><a href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a></li>`
         )
         .join("")}
     <!--<li><a href="home.html"><img class="nav-logo" src= "${logoURL}" alt="logo"></a></li>
