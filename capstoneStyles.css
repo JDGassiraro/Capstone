@@ -45,7 +45,7 @@ nav{
     align-items: center;
     gap: 1em;
     margin: 0px;
-    padding: 10px 8px;
+    /* padding: 10px 8px; */
 }
 
 .nav-ul li{
@@ -64,6 +64,10 @@ nav{
     background-color:#cbddcb;
 }
 
+.nav-logo-span{
+    display: block;
+}
+
 .nav-logo, img{
     width: 100%;
     margin: 0px;
@@ -78,6 +82,7 @@ nav{
     text-decoration: none;
     color: #14110f;
     font-family: 'Roboto-slab', sans-serif;
+    padding: 0%;
 }
 
 .search-div{

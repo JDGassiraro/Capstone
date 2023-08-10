@@ -21,22 +21,56 @@ function afterRender(state){
   // add menu toggle to bars icon in nav bar
   document.querySelector(".fa-bars").addEventListener("click", () => {
   document.querySelector("nav > ul").classList.toggle("hidden--mobile")
-  }),
+  });
 
-  //add or remove paragraphs in the About Us Page w/Student Button
-  document.querySelector("#student-button").addEventListener("click", () => {
-  document.querySelector("#text-organizer > div:first-child").classList.toggle("hidden");
-  })
+  if(state.view === "Aboutus"){
+    //add or remove paragraphs in the About Us Page w/Student Button
+    document.querySelector("#student-button").addEventListener("click", () => {
+    document.querySelector("#text-organizer > div:first-child").classList.toggle("hidden");
+    })
 
-  //add or remove paragraphs in the About Us Page w/Student Button
-  document.querySelector("#educator-button").addEventListener("click", () => {
-  document.querySelector("#text-organizer > div:last-child").classList.toggle("hidden");
-  })
+    //add or remove paragraphs in the About Us Page w/Educator Button
+    document.querySelector("#educator-button").addEventListener("click", () => {
+    document.querySelector("#text-organizer > div:last-child").classList.toggle("hidden");
+    })
+  };
 
-  //add comment button under game specific game page when typing a comment.
-    document.querySelector(".gs-order-small > textarea").addEventListener("click",() => {
-    document.querySelector(".gs-order-small > .comment-button").classList.toggle("hidden");
-  })
+  if(state.view === "Gamespecific"){
+    //add comment button under game specific game page when typing a comment.
+    document.querySelector(".gs-order-small > textarea").addEventListener("input",() => {
+    document.querySelector(".gs-order-small > .comment-button").classList.remove("hidden");
+    })
+    //COMMENT FORM STARTS HERE
+    // Add an event handler for the submit button on the form
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      // Get the form element
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+
+      // Create a request body object to send to the API
+      const requestData = {
+        comment: inputList.comment.value,
+      };
+      // Log the request body to the console
+      console.log("request Body", requestData);
+
+      axios
+        // Make a POST request to the API to create a new comment
+        .post(`${process.env.CAPSTONE_API_URL}/comments`, requestData)
+        .then(response => {
+        //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the comment list
+          store.Comment.comments.push(response.data);
+          router.navigate("/Comment");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("It puked", error);
+        });
+    });
+  }
+
 }
 
 router.hooks({

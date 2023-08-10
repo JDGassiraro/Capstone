@@ -2,6 +2,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import comments from "./routers/comments.js";
 
 // Initialize the Express application
 const app = express();
@@ -84,6 +85,9 @@ app.post("/add", (request, response) => {
   };
   response.json(responseBody);
 });
+
+//informs the app what route the router file will handle
+app.use("/comments", comments);
 
 // Tell the Express app to start listening
 // Let the humans know I am running and listening on 4040

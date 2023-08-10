@@ -28,10 +28,12 @@ export default () => html `
     </div>
 
     <div class="gs-order-small">
-        <h3>Comments</h3>
-        <label class="textarea-above" for="comments"></label>
-        <textarea name="comments" id="comments" cols="40" rows="10"></textarea>
-        <input type="submit" class="comment-button hidden" name="comments" value="Comment">
+        <form id="comment" method="POST" action="">
+            <h3>Send a Comment</h3>
+            <label class="textarea-above" for="comments"></label>
+            <textarea name="comments" id="comments" cols="40" rows="10"></textarea>
+            <input type="submit" class="comment-button hidden" name="comments" value="Comment">
+        </form>
     </div>
 </div>
 
