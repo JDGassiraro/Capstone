@@ -37,9 +37,10 @@ function afterRender(state){
 
   if(state.view === "Gamespecific"){
     //add comment button under game specific game page when typing a comment.
-    document.querySelector(".gs-order-small > textarea").addEventListener("input",() => {
-    document.querySelector(".gs-order-small > .comment-button").classList.remove("hidden");
+    document.querySelector("form > textarea").addEventListener("input",() => {
+    document.querySelector("form > .comment-button").classList.remove("hidden");
     })
+
     //COMMENT FORM STARTS HERE
     // Add an event handler for the submit button on the form
     document.querySelector("form").addEventListener("submit", event => {
