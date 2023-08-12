@@ -5,7 +5,7 @@
   } */
 
 * {
-    border: 1px dashed black;
+    /* border: 1px dashed black; */
     font-family: 'Sansita', sans-serif;
     box-sizing: border-box;
     padding: 0px;
@@ -95,9 +95,6 @@ nav{
     padding: 0px;
 }
 
-.nav-search, .search-button, .search-field{
-    /* display: inline-block; */
-}
 .search-field{
     font-family: 'Roboto-slab', sans-serif;
     margin-right: 0px;
@@ -111,6 +108,24 @@ nav{
 .search-button:hover{
     cursor: pointer;
     background-color:#cbddcb;
+}
+
+/*Image Positioning Classes*/
+.banner-image-div{
+    display:flex;
+    justify-content: center;
+}
+
+.passive-banner-image-div{
+    max-width: 80%;
+    position: relative;
+    margin-left: 10%;
+}
+
+.banner-image{
+    max-width: 80%;
+    display: center;
+    position: relative;
 }
 
 /*Game Grid classes*/
@@ -136,8 +151,8 @@ nav{
     /* max-width: 90%; */
 }
 
-.game-section-header{
-    padding: 2px;
+.game-section-header, h1, h2, h3, h4, h5, h6 {
+    padding: .3%;
     color:  #387780;
 }
 
@@ -253,10 +268,29 @@ nav{
     display: flex;
     justify-content: center;
     padding: .3%;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lp-image{
+    max-width: 10%;
+}
+
+.center-header{
+    text-align:center;
 }
 
 .lp-result-info{
     display: flex;
+    justify-content: center;
+}
+
+.lp-result-text{
+    max-width: 40%;
+    margin: .2%;
+    padding: .5%;
 }
 
 /*Game Specific Page*/
@@ -296,6 +330,38 @@ nav{
 
 .comment-button:hover{
     cursor: pointer;
+}
+/*Multiplayer Page*/
+.select-multiplayer-container{
+    background-color: rgba(20, 17,15, .2);
+    display: flex;
+    padding: .5%;
+}
+
+.select-multiplayer-image{
+    width: 50%;
+    justify-content: left;
+}
+
+.multiplayer-game-information{
+    display: column;
+    padding: 1%;
+}
+
+.multiplayer-game-information > h2{
+    text-align: center;
+}
+
+.multiplayer-game-information > p{
+    text-align: center;
+}
+
+.multiplayer-game-information > input{
+    display: center;
+    text-align: center;
+    border-radius: 15%;
+    background-color: #a4c2a5;
+    padding: 2%;
 }
 
 @media (max-width: 549px){

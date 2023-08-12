@@ -5,7 +5,7 @@ const commentSchema = new mongoose.Schema({
     type: String,
     required: true,
 
-    //validation that allows
+    //validation allows special characters along with letters and numbers to be accepted
     validate: /^\w+/
   }
 });

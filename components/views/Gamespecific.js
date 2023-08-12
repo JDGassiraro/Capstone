@@ -3,8 +3,8 @@ import stockURL from "/images/gameImages/diverUnderwater.jpg";
 
 export default () => html `
 <h1>Game Specific Page</h1>
-<!--Game Image-->
 
+<!--Game Image-->
 <div class="gs-image-div">
     <img id="gs-image" src="${stockURL}" alt="Game Image">
 </div>
@@ -41,16 +41,16 @@ export default () => html `
 <div class="game-section">
     <h3 class="game-section-header">Similar Games</h3>
     <div class="game-section-list">
-        <a href="Gamespecific"><img alt="game image"></a>
-        <a href="Gamespecific"><img alt="game image"></a>
-        <a href="Gamespecific"><img alt="game image"></a>
-        <a href="Gamespecific"><img alt="game image"></a>
-        <a href="Gamespecific"><img alt="game image"></a>
-        <a href="Gamespecific"><img alt="game image"></a>
-        <a href="Gamespecific"><img alt="game image"></a>
-        <a href="Gamespecific"><img alt="game image"></a>
-        <a href="Gamespecific"><img alt="game image"></a>
-        <a href="Gamespecific"><img alt="game image"></a>
+        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
     </div>
 </div>
 `;
