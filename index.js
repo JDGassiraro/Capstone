@@ -84,7 +84,25 @@ case "Home":
 axios
   // Get request to retrieve the current weather data using the API key and providing a city name
   .get(
-    `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis`
+    //Gets weather for St. Louis
+    //`https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis`
+
+
+
+
+    navigator.geolocation.getCurrentPosition((position) => {
+       const lat = position.coords.latitude.toFixed(4);
+       const lon =  position.coords.longitude.toFixed(4);
+
+    //Gets current weather at exact location (lat, lon) coordinates
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`;
+
+    //Reverse geocodes the (lat, lon) coordinates into the name of the location present
+    `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit={2}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`;
+    console.log(lat, lon);
+    })
+
+
   )
   .then(response => {
     // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
@@ -93,10 +111,12 @@ axios
 
     // Create an object to be stored in the Home state from the response
     store.Home.weather = {
+      lat: response.data.lat,
+      lon: response.data.lon,
       city: response.data.name,
       temp: kelvinToFahrenheit(response.data.main.temp),
       feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
-      description: response.data.weather[0].main
+      description: response.data.weather[0].main,
     };
 
     // An alternate method would be to store the values independently
