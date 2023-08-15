@@ -43,7 +43,8 @@ function afterRender(state) {
 
     //COMMENT FORM STARTS HERE
     // Add an event handler for the submit button on the form
-    document.querySelector("form").addEventListener("submit", event => {
+    const commentForm = document.querySelector("form");
+    commentForm.addEventListener("submit", event => {
       event.preventDefault();
 
       // Get the form element
@@ -52,7 +53,7 @@ function afterRender(state) {
 
       // Create a request body object to send to the API
       const requestData = {
-        comment: inputList.comment.value,
+        comment: inputList.comments.value,
       };
       // Log the request body to the console
       console.log("request Body", requestData);
@@ -61,10 +62,10 @@ function afterRender(state) {
         // Make a POST request to the API to create a new comment
         .post(`${process.env.CAPSTONE_API_URL}/comments`, requestData)
         .then(response => {
-          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the comment list
-          store.Comment.comments.push(response.data);
-          //store.Comment.comments.push(request.data);
-          router.navigate("/Comment");
+          console.log(response);
+          store.Gamespecific.commentHistory.push(response.data);
+          commentForm.reset();
+          router.navigate("/Gamespecific");
         })
         // If there is an error log it to the console
         .catch(error => {
