@@ -1,5 +1,6 @@
 import html from "html-literal";
 import stockURL from "/images/gameImages/diverUnderwater.jpg";
+import * as images from "../../images";
 
 export default (state) => html`
 <!--Grid Bar-->

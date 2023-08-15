@@ -3,6 +3,7 @@ import stockURL from "/images/gameImages/diverUnderwater.jpg";
 import bannerImage from "/images/educationImages/apple-4958609_1280.png";
 import schoolImage1 from "/images/educationImages/back-view-adults-studying-together_23-2150331653.png";
 import schoolImage2 from "/images/educationImages/back-view-adults-studying-together_23-2150331653.png";
+import * as images from "../../images";
 
 
 export default () => html `<h1>

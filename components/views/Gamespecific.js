@@ -46,7 +46,7 @@ export default (state) => html `
     <div class="game-section-list">
         <a href="Gamespecific"><img src="${images.guitarFrog}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.anteaterInNature}" alt="game image"></a>
         <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
         <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
         <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>

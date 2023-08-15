@@ -1,5 +1,6 @@
 import html from "html-literal";
 import stockURL from "/images/gameImages/diverUnderwater.jpg";
+import * as images from "../../images";
 
 export default () => html `<h1>
       Game List Page
@@ -8,7 +9,7 @@ export default () => html `<h1>
 <div class="passive-banner-image-div">
       <!--Banner Image-->
       <div>
-            <img src="${stockURL}" alt="banner-image">
+            <img src="${images.nebula}" alt="banner-image">
       </div>
 
       <!--Container for Search Elements-->
@@ -25,19 +26,21 @@ export default () => html `<h1>
             <label for="feedback">Sort By</label>
                   <select name="feedback" id="feedback">
                   <option value="">Click Here</option>
-                        <optgroup label="Arcade Options"/>
-                        <option value="strategy">Strategy</option>
-                        <option value="action">Action</option>
-                        <option value="adventure">Adventure</option>
-                        <option value="puzzle">Puzzle</option>
-                        <option value="tower-defense">Tower Defense</option>
-                        <optgroup label="Education Options"/>
-                        <option value="math">Math</option>
-                        <option value="reading">Reading</option>
-                        <option value="science">Science</option>
-                        <option value="history">History</option>
-                        <option value="typing">Typing</option>
-                        <option value="coding">Coding</option>
+                        <optgroup label="Arcade Options">
+                              <option value="strategy">Strategy</option>
+                              <option value="action">Action</option>
+                              <option value="adventure">Adventure</option>
+                              <option value="puzzle">Puzzle</option>
+                              <option value="tower-defense">Tower Defense</option>
+                        </optgroup>
+                        <optgroup label="Education Options">
+                              <option value="math">Math</option>
+                              <option value="reading">Reading</option>
+                              <option value="science">Science</option>
+                              <option value="history">History</option>
+                              <option value="typing">Typing</option>
+                              <option value="coding">Coding</option>
+                        </optgroup>
 
                   </select>
       </div>

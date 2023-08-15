@@ -88,7 +88,7 @@ router.hooks({
           const lat = position.coords.latitude.toFixed(4);
           const lon = position.coords.longitude.toFixed(4);
           axios
-            // Get request to retrieve the current weather data using the API key and providing a city name
+            // Get request to retrieve the current weather data and city name using Geolocator's lat and lon coords and API key
             .get(
               //Gets current weather at exact location (lat, lon) coordinates
               `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
