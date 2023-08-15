@@ -3,6 +3,7 @@ import stockURL from "/images/gameImages/diverUnderwater.jpg";
 import bannerImage from "/images/educationImages/apple-4958609_1280.png";
 import schoolImage1 from "/images/educationImages/back-view-adults-studying-together_23-2150331653.png";
 import schoolImage2 from "/images/educationImages/back-view-adults-studying-together_23-2150331653.png";
+import * as images from "../../images";
 
 
 export default () => html `<h1>
@@ -14,6 +15,7 @@ export default () => html `<h1>
       <div class="lp-dropdown">
       <label for="weekplanner">Select Cirriculum Week:</label>
             <select name="weekplanner" id="weekplanner">
+                  <option value="">Click Here</option>
                   <option value="Week 1">Week 1</option>
                   <option value="Week 2">Week 2</option>
                   <option value="Week 3">Week 3</option>

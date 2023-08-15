@@ -1,5 +1,6 @@
 import html from "html-literal";
 import stockURL from "/images/gameImages/diverUnderwater.jpg";
+import * as images from "../../images";
 
 export default (state) => html`
 <!--Grid Bar-->
@@ -23,6 +24,11 @@ export default (state) => html`
         <a href="Gamespecific"><img class="grid-image" src="${stockURL}" alt="game image"></a>
     </div>
 </div>
+
+<h3 class="api-info-statement">
+The weather in ${state.weather.city} is ${state.weather.description}. Temperature is ${state.weather.temp}F, and it feels like ${state.weather.feelsLike}F.
+The location is ${state.weather.lat}, ${state.weather.lon}.
+</h3>
 
 <!--Most Popular Games-->
 <div class="game-section">
@@ -57,9 +63,6 @@ export default (state) => html`
         <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
     </div>
 </div>
-<h3>
-The weather in ${state.weather.city} is ${state.weather.description}. Temperature is ${state.weather.temp}F, and it feels like ${state.weather.feelsLike}F.
-The location is ${state.weather.lat}, ${state.weather.lon}.
-</h3>
+
 `;
 

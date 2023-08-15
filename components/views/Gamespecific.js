@@ -1,7 +1,8 @@
 import html from "html-literal";
 import stockURL from "/images/gameImages/diverUnderwater.jpg";
+import * as images from "../../images";
 
-export default () => html `
+export default (state) => html `
 <h1>Game Specific Page</h1>
 
 <!--Game Image-->
@@ -15,7 +16,8 @@ export default () => html `
     <div class="gs-order-small">
         <div class="gs-order-small">
             <h3>Number of Plays</h3>
-            <p>Number of Plays</p></div>
+            <p>Number of Plays</p>
+        </div>
         <div class="gs-order-small">
             <h3>Published</h3>
             <p>Date Published</p>
@@ -23,27 +25,28 @@ export default () => html `
     </div>
 
     <div class="gs-order-small">
-        <h3>Most Recent Update and Date</h3>
+        <h3>Update Information</h3>
         <p>Most  Recent Update Information</p>
     </div>
 
+    <!--Comment Section-->
     <div class="gs-order-small">
         <form id="comment" method="POST" action="">
             <h3>Send a Comment</h3>
             <label class="textarea-above" for="comments"></label>
             <textarea name="comments" id="comments" cols="40" rows="10"></textarea>
-            <input type="submit" class="comment-button hidden" name="comments" value="Comment">
+            <input type="submit" class="comment-button hidden" name="comment-button" value="Comment">
         </form>
     </div>
 </div>
-
+<div>${state.commentHistory}</div>
 <!--Similar Games-->
 <div class="game-section">
     <h3 class="game-section-header">Similar Games</h3>
     <div class="game-section-list">
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.guitarFrog}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.anteaterInNature}" alt="game image"></a>
         <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
         <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
         <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>

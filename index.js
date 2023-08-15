@@ -1,5 +1,5 @@
 import Navigo from "navigo";
-import {capitalize} from "lodash";
+import { capitalize } from "lodash";
 import { Header, Nav, Main, Footer } from "./components";
 import * as store from "./store";
 import axios from "axios";
@@ -17,33 +17,34 @@ function render(state = store.Home) {
   router.updatePageLinks();
 }
 
-function afterRender(state){
+function afterRender(state) {
   // add menu toggle to bars icon in nav bar
   document.querySelector(".fa-bars").addEventListener("click", () => {
-  document.querySelector("nav > ul").classList.toggle("hidden--mobile")
+    document.querySelector("nav > ul").classList.toggle("hidden--mobile")
   });
 
-  if(state.view === "Aboutus"){
+  if (state.view === "Aboutus") {
     //add or remove paragraphs in the About Us Page w/Student Button
     document.querySelector("#student-button").addEventListener("click", () => {
-    document.querySelector("#text-organizer > div:first-child").classList.toggle("hidden");
+      document.querySelector("#text-organizer > div:first-child").classList.toggle("hidden");
     })
 
     //add or remove paragraphs in the About Us Page w/Educator Button
     document.querySelector("#educator-button").addEventListener("click", () => {
-    document.querySelector("#text-organizer > div:last-child").classList.toggle("hidden");
+      document.querySelector("#text-organizer > div:last-child").classList.toggle("hidden");
     })
   };
 
-  if(state.view === "Gamespecific"){
+  if (state.view === "Gamespecific") {
     //add comment button under game specific game page when typing a comment.
-    document.querySelector("form > textarea").addEventListener("input",() => {
-    document.querySelector("form > .comment-button").classList.remove("hidden");
+    document.querySelector("form > textarea").addEventListener("input", () => {
+      document.querySelector("form > .comment-button").classList.remove("hidden");
     })
 
     //COMMENT FORM STARTS HERE
     // Add an event handler for the submit button on the form
-    document.querySelector("form").addEventListener("submit", event => {
+    const commentForm = document.querySelector("form");
+    commentForm.addEventListener("submit", event => {
       event.preventDefault();
 
       // Get the form element
@@ -52,7 +53,7 @@ function afterRender(state){
 
       // Create a request body object to send to the API
       const requestData = {
-        comment: inputList.comment.value,
+        comment: inputList.comments.value,
       };
       // Log the request body to the console
       console.log("request Body", requestData);
@@ -61,9 +62,10 @@ function afterRender(state){
         // Make a POST request to the API to create a new comment
         .post(`${process.env.CAPSTONE_API_URL}/comments`, requestData)
         .then(response => {
-        //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the comment list
-          store.Comment.comments.push(response.data);
-          router.navigate("/Comment");
+          console.log(response);
+          store.Gamespecific.commentHistory.push(response.data);
+          commentForm.reset();
+          router.navigate("/Gamespecific");
         })
         // If there is an error log it to the console
         .catch(error => {
@@ -80,81 +82,62 @@ router.hooks({
     // Add a switch case statement to handle multiple routes
     switch (view) {
       // New Case for the Home View
-case "Home":
-axios
-  // Get request to retrieve the current weather data using the API key and providing a city name
-  .get(
-    //Gets weather for St. Louis
-    //`https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis`
+      case "Home":
 
+        navigator.geolocation.getCurrentPosition((position) => {
+          const lat = position.coords.latitude.toFixed(4);
+          const lon = position.coords.longitude.toFixed(4);
+          axios
+            // Get request to retrieve the current weather data and city name using Geolocator's lat and lon coords and API key
+            .get(
+              //Gets current weather at exact location (lat, lon) coordinates
+              `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
+            )
 
+            .then(response => {
+              // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
+              const kelvinToFahrenheit = kelvinTemp =>
+                Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
 
-
-    navigator.geolocation.getCurrentPosition((position) => {
-       const lat = position.coords.latitude.toFixed(4);
-       const lon =  position.coords.longitude.toFixed(4);
-
-    //Gets current weather at exact location (lat, lon) coordinates
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`;
-
-    //Reverse geocodes the (lat, lon) coordinates into the name of the location present
-    `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit={2}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`;
-    console.log(lat, lon);
-    })
-
-
-  )
-  .then(response => {
-    // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
-    const kelvinToFahrenheit = kelvinTemp =>
-      Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
-
-    // Create an object to be stored in the Home state from the response
-    store.Home.weather = {
-      lat: response.data.lat,
-      lon: response.data.lon,
-      city: response.data.name,
-      temp: kelvinToFahrenheit(response.data.main.temp),
-      feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
-      description: response.data.weather[0].main,
-    };
-
-    // An alternate method would be to store the values independently
-    /*
-    store.Home.weather.city = response.data.name;
-    store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
-    store.Home.weather.feelsLike = kelvinToFahrenheit(response.data.main.feels_like);
-    store.Home.weather.description = response.data.weather[0].main;
-    */
-    done();
-})
-.catch((err) => {
-  console.log(err);
-  done();
-});
-  break;
-default :
-    done();
-      }
-    },
-    already: (params) => {
-      const view = params && params.data && params.data.view ? capitalize(params.data.view) : "Home";
-
-      render(store[view]);
-    }
-  });
-
-router
-.on({
-  "/": () => render(store.Home),
-  ":view": (params) => {
-    let view = capitalize(params.data.view);
-    if (store.hasOwnProperty(view)) {
-      render(store[view]);
-    } else {
-      render(store.Viewnotfound);
-      console.log(`View ${view} not defined`);
+              // Create an object to be stored in the Home state from the response
+              store.Home.weather = {
+                lat: response.data.coord.lat,
+                lon: response.data.coord.lon,
+                city: response.data.name,
+                temp: kelvinToFahrenheit(response.data.main.temp),
+                feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
+                description: response.data.weather[0].main,
+              };
+              done();
+            })
+            .catch((err) => {
+              console.log(err);
+              done();
+            });
+        });
+        break;
+      default:
+        done();
     }
   },
-})
-.resolve();
+  already: (params) => {
+    const view = params && params.data && params.data.view ? capitalize(params.data.view) : "Home";
+
+    render(store[view]);
+  }
+});
+
+router
+  .on({
+    "/": () => render(store.Home),
+    ":view": (params) => {
+      let view = capitalize(params.data.view);
+      if (store.hasOwnProperty(view)) {
+        render(store[view]);
+      } else {
+        render(store.Viewnotfound);
+        console.log(`View ${view} not defined`);
+      }
+    },
+  })
+  .resolve();

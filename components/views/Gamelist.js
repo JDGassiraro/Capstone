@@ -1,18 +1,19 @@
 import html from "html-literal";
 import stockURL from "/images/gameImages/diverUnderwater.jpg";
+import * as images from "../../images";
 
 export default () => html `<h1>
       Game List Page
 </h1>
 
-<div>
+<div class="passive-banner-image-div">
       <!--Banner Image-->
       <div>
-            <img src="${stockURL}" alt="banner-image">
+            <img src="${images.nebula}" alt="banner-image">
       </div>
 
       <!--Container for Search Elements-->
-      <div>
+      <div class="gl-search-tools">
             <!--Search Bar-->
             <div class="search-div">
             <label class="nav-search" for="nav-search"></label>
@@ -24,11 +25,23 @@ export default () => html `<h1>
             <div class="form-field">
             <label for="feedback">Sort By</label>
                   <select name="feedback" id="feedback">
-                        <option value="click-here">Click Here</option>
-                        <option value="game-pitch">Game Pitch</option>
-                        <option value="website-suggestion">Site Suggestion</option>
-                        <option value="game-issue">Game Bug Issue</option>
-                        <option value="other">Other</option>
+                  <option value="">Click Here</option>
+                        <optgroup label="Arcade Options">
+                              <option value="strategy">Strategy</option>
+                              <option value="action">Action</option>
+                              <option value="adventure">Adventure</option>
+                              <option value="puzzle">Puzzle</option>
+                              <option value="tower-defense">Tower Defense</option>
+                        </optgroup>
+                        <optgroup label="Education Options">
+                              <option value="math">Math</option>
+                              <option value="reading">Reading</option>
+                              <option value="science">Science</option>
+                              <option value="history">History</option>
+                              <option value="typing">Typing</option>
+                              <option value="coding">Coding</option>
+                        </optgroup>
+
                   </select>
       </div>
 

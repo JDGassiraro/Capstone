@@ -1,33 +1,14 @@
 import html from "html-literal";
 
-/* When button is clicked, show the text. When the
-   button is clicked again, make the paragrah go away.
-   Do the same for the other text paragraph
-let studentButton = document.querySelector('#student-button');
-let educatorButton = document.querySelector('#educator-statement')
-
-studentButton.addEventListener('click', ()=>{
-
-})
-educatorButton.addEventListener('click', ()=>{
-
-})
-
-.hidden{
-    display: none !important;
-  }
-document.querySelector(".nav-links").classList.toggle("hidden--mobile");
-the classList.toggle adds/removes the class
-
-;*/
-
 export default () => html `
 <!--About US/Mission Statement-->
-<div>
+<div class="element-stack-center">
       <!--Mission Statement-->
-      <h1 id="about-us-h1">A Thoughtful and Fun Educational Quote</h1>
+      <h1 id="about-us-h1">"Have a desire to learn and make it fun." </h1>
       <!--About Us text-->
-      <p id="mission-statement">At Brain Waves Games we believe that computer games and be equally educational and fun.</p>
+      <h3 id="mission-statement">At Brain Wave Games, our mission is to teach knowledge through computer
+            games so that not only will gaming be a sincerely educational experience, but also a heck of
+            a lot of fun. </h3>
 </div>
 
 <div class="au-buttons">
