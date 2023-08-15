@@ -14,6 +14,7 @@ export default () => html `<h1>
       <div class="lp-dropdown">
       <label for="weekplanner">Select Cirriculum Week:</label>
             <select name="weekplanner" id="weekplanner">
+                  <option value="">Click Here</option>
                   <option value="Week 1">Week 1</option>
                   <option value="Week 2">Week 2</option>
                   <option value="Week 3">Week 3</option>

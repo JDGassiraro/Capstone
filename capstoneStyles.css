@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita:ital@0;1&display=swap');
 
-/* :root {
-    --color-primary: #00ccff;
-  } */
+:root {
+    --game-list-gap: 1em;
+  }
 
 * {
     /* border: 1px dashed black; */
@@ -15,6 +15,10 @@
 header, footer{
     background-color: #14110f;
     font-family: 'Sansita', sans-serif;
+}
+
+header > h1{
+    margin: 0;
 }
 
 footer{
@@ -110,6 +114,11 @@ nav{
     background-color:#cbddcb;
 }
 
+/*API Statement Class*/
+.api-info-statement{
+    margin: 1%;
+}
+
 /*Image Positioning Classes*/
 .banner-image-div{
     display:flex;
@@ -157,7 +166,6 @@ nav{
 }
 
 .game-section-list {
- --game-list-gap: 1em;
  display: flex;
  align-items: flex-start;
  flex-wrap: wrap;
@@ -173,6 +181,12 @@ nav{
 }
 
 /*About Us Classes*/
+
+.element-stack-center{
+    display: block;
+    justify-content: center;
+}
+
 #about-us-h1{
     text-align: center;
     color:  #387780;
@@ -180,6 +194,7 @@ nav{
 
 #mission-statement{
     text-align: center;
+    margin: 0 10% 0 10%;
 }
 
 #text-organizer{
@@ -293,8 +308,27 @@ nav{
     padding: .5%;
 }
 
-/*Game Specific Page*/
+/*Game List Page*/
+.gl-search-tools{
+    display: inline;
+}
 
+.gl-search-tools > .search-div{
+    display: flex;
+    justify-content: center;
+    padding: .3%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gl-search-tools > .form-field{
+    display: flex;
+    justify-content: center;
+}
+
+/*Game Specific Page*/
 
 .gs-image-div{
     display:flex;
@@ -331,7 +365,9 @@ nav{
 .comment-button:hover{
     cursor: pointer;
 }
+
 /*Multiplayer Page*/
+
 .select-multiplayer-container{
     background-color: rgba(20, 17,15, .2);
     display: flex;
@@ -365,6 +401,10 @@ nav{
 }
 
 @media (max-width: 549px){
+    :root {
+        --game-list-gap: .5em;
+      }
+
     .hidden--mobile {
       display: none !important;
     }
@@ -393,6 +433,10 @@ nav{
 
     #gs-order{
         display: block;
+    }
+
+    .gl-search-tools > .search-div{
+        bottom: 8%;
     }
 }
 

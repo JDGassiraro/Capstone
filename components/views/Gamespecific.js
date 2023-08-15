@@ -15,7 +15,8 @@ export default () => html `
     <div class="gs-order-small">
         <div class="gs-order-small">
             <h3>Number of Plays</h3>
-            <p>Number of Plays</p></div>
+            <p>Number of Plays</p>
+        </div>
         <div class="gs-order-small">
             <h3>Published</h3>
             <p>Date Published</p>
@@ -23,7 +24,7 @@ export default () => html `
     </div>
 
     <div class="gs-order-small">
-        <h3>Most Recent Update and Date</h3>
+        <h3>Update Information</h3>
         <p>Most  Recent Update Information</p>
     </div>
 
