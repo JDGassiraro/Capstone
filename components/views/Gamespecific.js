@@ -1,5 +1,6 @@
 import html from "html-literal";
 import stockURL from "/images/gameImages/diverUnderwater.jpg";
+import * as images from "../../images";
 
 export default (state) => html `
 <h1>Game Specific Page</h1>
@@ -43,7 +44,7 @@ export default (state) => html `
 <div class="game-section">
     <h3 class="game-section-header">Similar Games</h3>
     <div class="game-section-list">
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.guitarFrog}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
         <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
         <a href="Gamespecific"><img src="${stockURL}" alt="game image"></a>
