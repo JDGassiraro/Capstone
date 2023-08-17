@@ -1,5 +1,4 @@
 import html from "html-literal";
-import stockURL from "/images/gameImages/diverUnderwater.jpg";
 import * as images from "../../images";
 
 export default () => html `<h1>
@@ -51,32 +50,32 @@ export default () => html `<h1>
 <div class="game-section">
     <h3 class="game-section-header">Most Popular Games this Week</h3>
     <div class="game-section-list">
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.diverUnderwater}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.babyForestDragon}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.koiFish}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.joustingKnights}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.rocketship}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.snowyMountains}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.snake}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.bigfoot}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.horseRace}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.guitarFrog}"  alt="game image"></a>
     </div>
 </div>
 
 <div class="game-section">
     <h3 class="game-section-header">Most Popular Games this Week</h3>
     <div class="game-section-list">
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.handDrawnPenguins}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.mummy}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.wraith}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.volcano}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.anteaterInNature}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.books}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.horse}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.calendar}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.transformer}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.appleOnDesk}"  alt="game image"></a>
     </div>
 </div>
 

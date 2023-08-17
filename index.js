@@ -63,7 +63,8 @@ function afterRender(state) {
         .post(`${process.env.CAPSTONE_API_URL}/comments`, requestData)
         .then(response => {
           console.log(response);
-          store.Gamespecific.commentHistory.push(response.data);
+          store.Gamespecific.commentHistory.push(response.data.comment);
+            //wipes the current comment from the textarea elements
           commentForm.reset();
           router.navigate("/Gamespecific");
         })

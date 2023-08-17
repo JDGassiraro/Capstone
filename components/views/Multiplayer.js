@@ -1,5 +1,4 @@
 import html from "html-literal";
-import stockURL from "/images/gameImages/diverUnderwater.jpg";
 import * as images from "../../images";
 
 export default (state) => html `<h1>
@@ -9,7 +8,7 @@ export default (state) => html `<h1>
 <!--Container for the Particular Multiplayer Game Selected-->
 <div class= "select-multiplayer-container">
       <div class= "select-multiplayer-image">
-            <img src="${stockURL}" alt="multiplayer game image">
+            <img src="${images.koiFish}" alt="multiplayer game image">
       </div>
 
       <!--Particular Multiplayer Game-->
@@ -29,16 +28,16 @@ export default (state) => html `<h1>
 <div class="game-section">
     <h3 class="game-section-header">Other Multiplayer Games</h3>
     <div class="game-section-list">
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${stockURL}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.joustingKnights}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.babyForestDragon}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.wraith}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.handDrawnPenguins}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.mongooses}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.volcano}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.transformer}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.anteaterInNature}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.rocketship}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.horseRace}"  alt="game image"></a>
     </div>
 </div>
 

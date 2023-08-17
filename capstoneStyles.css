@@ -366,6 +366,14 @@ nav{
     cursor: pointer;
 }
 
+#comments{
+    resize: none;
+}
+.comment-record{
+    margin-top: 1%;
+    background-color: whitesmoke;
+}
+
 /*Multiplayer Page*/
 
 .select-multiplayer-container{
