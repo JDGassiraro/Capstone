@@ -26,7 +26,6 @@ export default (state) => html`
 
 <h3 class="api-info-statement">
 The weather in ${state.weather.city} is ${state.weather.description}. Temperature is ${state.weather.temp}F, and it feels like ${state.weather.feelsLike}F.
-The location is ${state.weather.lat}, ${state.weather.lon}.
 </h3>
 
 <!--Most Popular Games-->
