@@ -84,38 +84,48 @@ router.hooks({
     switch (view) {
       // New Case for the Home View
       case "Home":
-
-        navigator.geolocation.getCurrentPosition((position) => {
-          const lat = position.coords.latitude.toFixed(4);
-          const lon = position.coords.longitude.toFixed(4);
-          axios
-            // Get request to retrieve the current weather data and city name using Geolocator's lat and lon coords and API key
-            .get(
-              //Gets current weather at exact location (lat, lon) coordinates
-              `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
-            )
-
-            .then(response => {
-              // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
-              const kelvinToFahrenheit = kelvinTemp =>
-                Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
-
-              // Create an object to be stored in the Home state from the response
-              store.Home.weather = {
-                lat: response.data.coord.lat,
-                lon: response.data.coord.lon,
-                city: response.data.name,
-                temp: kelvinToFahrenheit(response.data.main.temp),
-                feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
-                description: response.data.weather[0].main,
-              };
+        //Permissions API
+        navigator.permissions.query({ name: "geolocation" }).then(result => {
+            //if result in the permissions query is not strictly granted
+          if(result.state !== "granted"){
+            console.log(result);
               done();
-            })
-            .catch((err) => {
-              console.log(err);
-              done();
-            });
+              document.querySelector(".api-info-statement.weather-api").classList.add("hidden");
+              return result;
+          }
+          navigator.geolocation.getCurrentPosition((position) => {
+            const lat = position.coords.latitude.toFixed(4);
+            const lon = position.coords.longitude.toFixed(4);
+            axios
+              // Get request to retrieve the current weather data and city name using Geolocator's lat and lon coords and API key
+              .get(
+                //Gets current weather at exact location (lat, lon) coordinates
+                `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
+              )
+
+              .then(response => {
+                // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
+                const kelvinToFahrenheit = kelvinTemp =>
+                  Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
+
+                // Create an object to be stored in the Home state from the response
+                store.Home.weather = {
+                  lat: response.data.coord.lat,
+                  lon: response.data.coord.lon,
+                  city: response.data.name,
+                  temp: kelvinToFahrenheit(response.data.main.temp),
+                  feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
+                  description: response.data.weather[0].main,
+                };
+                done();
+              })
+              .catch((err) => {
+                console.log(err);
+                done();
+              });
+          });
         });
+
         break;
       default:
         done();
