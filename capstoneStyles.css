@@ -153,6 +153,7 @@ nav{
     padding: 0%;
     grid-gap: 10%;
     object-fit: cover;
+    height: 100%;
 }
 
 /*Game Flex  Classes*/
@@ -388,8 +389,11 @@ nav{
 }
 
 .multiplayer-game-information{
-    display: column;
-    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 1% 0% 1%;
 }
 
 .multiplayer-game-information > h2{
@@ -398,10 +402,10 @@ nav{
 
 .multiplayer-game-information > p{
     text-align: center;
+    margin-bottom: 1.5%;
 }
 
 .multiplayer-game-information > input{
-    display: center;
     text-align: center;
     border-radius: 15%;
     background-color: #a4c2a5;

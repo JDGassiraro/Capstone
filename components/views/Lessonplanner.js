@@ -40,18 +40,18 @@ export default () => html `<h1>
 </div>
 
 <div class="game-section">
-    <h3 class="game-section-header">Most Popular Games this Week</h3>
+    <h3 class="game-section-header">Advised Games</h3>
     <div class="game-section-list">
         <a href="Gamespecific"><img src="${images.diverUnderwater}" alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.diverUnderwater}" alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.diverUnderwater}" alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.diverUnderwater}" alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.diverUnderwater}" alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.diverUnderwater}" alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.diverUnderwater}" alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.diverUnderwater}" alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.diverUnderwater}" alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.diverUnderwater}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.anteaterInNature}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.joustingKnights}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.handDrawnPenguins}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.babyForestDragon}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.nebula}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.horseRace}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.mongooses}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.horse}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.koiFish}" alt="game image"></a>
     </div>
 </div>
 

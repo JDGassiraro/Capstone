@@ -9,7 +9,7 @@ export default (state) => html`
         <a href="Gamespecific"><img class="grid-image" src="${images.babyForestDragon}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.books}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.calendar}" alt="game image"></a>
-        <a href="Gamespecific"><img class="grid-image" src="${images.koiFish}" alt="game image"></a>
+        <a href="Gamespecific"><img class="grid-image" src="${images.bigfoot}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.nebula}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.rocketship}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.joustingKnights}" alt="game image"></a>
@@ -19,12 +19,12 @@ export default (state) => html`
         <a href="Gamespecific"><img class="grid-image" src="${images.transformer}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.wraith}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.guitarFrog}" alt="game image"></a>
-        <a href="Gamespecific"><img class="grid-image" src="${images.anteaterInNature}" alt="game image"></a>
+        <a href="Gamespecific"><img class="grid-image" src="${images.snake}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.babyForestDragon}" alt="game image"></a>
     </div>
 </div>
 
-<h3 class="api-info-statement">
+<h3 class="api-info-statement weather-api">
 The weather in ${state.weather.city} is ${state.weather.description}. Temperature is ${state.weather.temp}F, and it feels like ${state.weather.feelsLike}F.
 </h3>
 

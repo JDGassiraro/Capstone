@@ -48,7 +48,7 @@ export default () => html `<h1>
 </div>
 
 <div class="game-section">
-    <h3 class="game-section-header">Most Popular Games this Week</h3>
+    <h3 class="game-section-header">Most Popular Games on Brain Waves Games</h3>
     <div class="game-section-list">
         <a href="Gamespecific"><img src="${images.diverUnderwater}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.babyForestDragon}"  alt="game image"></a>
