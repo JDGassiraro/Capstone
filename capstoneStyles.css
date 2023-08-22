@@ -62,15 +62,22 @@ nav{
 
 .nav-ul li:first-child{
     padding: 0%;
+    background-color: #14110f;
 }
 
 .nav-ul li:hover{
     background-color:#cbddcb;
 }
 
-.nav-logo-span{
-    display: block;
+
+.nav-ul > li:first-child:hover{
+    background-color: #14110f;
 }
+
+
+/* .nav-logo-span{
+    display: block;
+} */
 
 .nav-logo, img{
     width: 100%;
@@ -154,6 +161,11 @@ nav{
     grid-gap: 10%;
     object-fit: cover;
     height: 100%;
+}
+
+.grid-image:hover{
+    transition: transform 300ms;
+    transform: scale(1.5);
 }
 
 /*Game Flex  Classes*/
@@ -279,8 +291,9 @@ nav{
 }
 
 /*Lesson Planner Page*/
-
 .lp-dropdown{
+    border-radius: 3%;
+    background-color: rgba(164, 194, 165, .6);
     display: flex;
     justify-content: center;
     padding: .3%;
@@ -288,6 +301,10 @@ nav{
     bottom: 3%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#weekplanner:hover{
+    cursor: pointer;
 }
 
 .lp-image{
@@ -327,6 +344,10 @@ nav{
 .gl-search-tools > .form-field{
     display: flex;
     justify-content: center;
+}
+
+#feedback{
+    cursor: pointer;
 }
 
 /*Game Specific Page*/
@@ -410,6 +431,10 @@ nav{
     border-radius: 15%;
     background-color: #a4c2a5;
     padding: 2%;
+}
+
+.multiplayer-game-information > input:hover{
+    cursor: pointer;
 }
 
 @media (max-width: 549px){

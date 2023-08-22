@@ -3,6 +3,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import comments from "./routers/comments.js";
+import contactForms from "./routers/contactForms.js";
 
 // Initialize the Express application
 const app = express();
@@ -87,6 +88,7 @@ app.post("/add", (request, response) => {
 });
 
 //informs the app what route the router file will handle
+app.use("/contactForms", contactForms);
 app.use("/comments", comments);
 
 // Tell the Express app to start listening
