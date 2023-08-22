@@ -1,34 +1,35 @@
 import { Router } from  'express';
-import Comment from '../models/Comment.js';
+import ContactForm from '../models/ContactForm.js';
 
 const router = Router();
 
-// Create comment route
+// Create comment form route
 router.post("/", async (request, response) => {
   try {
-    const newComment = new Comment(request.body);
+    const newContactForm = new ContactForm(request.body);
 
-    const data = await newComment.save();
+    const data = await newContactForm.save();
 
     response.json(data);
   } catch(error) {
     // Output error to the console incase it fails to send in response
     console.log(error);
 
-    if ('name' in error && error.name === 'ValidationError') return response.status(400).json(error.errors);
+    if ('name' in error && error.name === 'ValidationError')
+    return response.status(400).json(error.errors);
 
     return response.status(500).json(error.errors);
   }
 });
 
-// Get all comments route
+// Get all contact forms route
 router.get("/", async (request, response) => {
   try {
     // Store the query params into a JavaScript Object
     const query = request.query; // Defaults to an empty object {}
     console.log(query);
 
-    const data = await Comment.find(query);
+    const data = await ContactForm.find(query);
 
     response.json(data);
   } catch(error) {
@@ -39,10 +40,10 @@ router.get("/", async (request, response) => {
   }
 });
 
-// Get a single comment by ID
+// Get a single contact form by ID
 router.get("/:id", async (request, response) => {
   try {
-    const data = await Comment.findById(request.params.id);
+    const data = await ContactForm.findById(request.params.id);
 
     response.json(data);
   } catch(error) {
@@ -53,10 +54,10 @@ router.get("/:id", async (request, response) => {
   }
 });
 
-// Delete a comment by ID
+// Delete a contact form by ID
 router.delete("/:id", async (request, response) => {
   try {
-    const data = await Comment.findByIdAndRemove(request.params.id, {});
+    const data = await ContactForm.findByIdAndRemove(request.params.id, {});
 
     response.json(data);
   } catch(error) {
@@ -67,16 +68,20 @@ router.delete("/:id", async (request, response) => {
   }
 });
 
-// Update a single comment by ID
+// Update a single contact form by ID
 router.put("/:id", async (request, response) => {
   try {
     const body = request.body;
 
-    const data = await Comment.findByIdAndUpdate(
+    const data = await ContactForm.findByIdAndUpdate(
       request.params.id,
       {
         $set: {
-          comment: body.comment
+          name: body.name,
+          email: body.email,
+          feedbackType: body.feedbackType,
+          subject: body.toppings,
+          message: body.message,
         }
       },
       {
@@ -96,3 +101,4 @@ router.put("/:id", async (request, response) => {
 });
 
 export default router;
+

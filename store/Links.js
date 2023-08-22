@@ -1,5 +1,5 @@
 export default [
-  { title: "Home", text: "Home" },
+  //{ title: "Home", text: "Home" },
   { title: "Gamelist", text: "Games" },
   { title: "Multiplayer", text: "Multiplayer" },
   { title: "Contactus", text: "Contact Us" },

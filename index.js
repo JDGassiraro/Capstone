@@ -23,6 +23,45 @@ function afterRender(state) {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile")
   });
 
+  if(state.view === "Contactus") {
+    //CONTACT US FORM STARTS HERE
+    // Add an event handler for the submit button on the form
+    const contactForm = document.querySelector("form");
+    contactForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      // Get the form element
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+
+      // Create a request body object to send to the API
+      const requestData = {
+        name: inputList.name.value,
+        email: inputList.email.value,
+        feedbackType: inputList.feedback.value,
+        subject: inputList.subject.value,
+        message: inputList.msg.value
+      };
+      // Log the request body to the console
+      console.log("request Body", requestData);
+
+      axios
+        // Make a POST request to the API to create a new comment
+        .post(`${process.env.CAPSTONE_API_URL}/contactForms`, requestData)
+        .then(response => {
+          console.log(response.data);
+          //wipes the current comment from the textarea elements
+          contactForm.reset();
+          //TEXT SAYING THANK YOU?
+          // router.navigate("/Contactus");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("It puked", error);
+        });
+    });
+  }
+
   if (state.view === "Aboutus") {
     //add or remove paragraphs in the About Us Page w/Student Button
     document.querySelector("#student-button").addEventListener("click", () => {
@@ -53,7 +92,7 @@ function afterRender(state) {
 
       // Create a request body object to send to the API
       const requestData = {
-        comment: inputList.comments.value,
+        comment: inputList.comments.value
       };
       // Log the request body to the console
       console.log("request Body", requestData);
