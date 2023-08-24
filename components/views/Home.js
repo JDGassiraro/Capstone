@@ -16,7 +16,7 @@ export default (state) => html`
         <a href="Gamespecific"><img class="grid-image" src="${images.handDrawnPenguins}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.snowyMountains}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.volcano}" alt="game image"></a>
-        <a href="Gamespecific"><img class="grid-image" src="${images.transformer}" alt="game image"></a>
+        <a href="Gamespecific"><img class="grid-image" src="${images.skylineEnforcers}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.wraith}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.guitarFrog}" alt="game image"></a>
         <a href="Gamespecific"><img class="grid-image" src="${images.snake}" alt="game image"></a>
@@ -57,7 +57,7 @@ The weather in ${state.weather.city} is ${state.weather.description}. Temperatur
         <a href="Gamespecific"><img src="${images.rocketship}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.bigfoot}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.guitarFrog}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.transformer}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.skylineEnforcers}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.volcano}"  alt="game image"></a>
     </div>
 </div>

@@ -124,6 +124,8 @@ nav{
 /*API Statement Class*/
 .api-info-statement{
     margin: 1%;
+    display: center;
+    text-align: center;
 }
 
 /*Image Positioning Classes*/
@@ -183,6 +185,8 @@ nav{
  align-items: flex-start;
  flex-wrap: wrap;
  gap: var(--game-list-gap);
+ /* background-color: rgba(20, 17,15, .2);
+ padding: .5%; */
 }
 
 .game-section-list a{
@@ -423,6 +427,7 @@ nav{
 
 .multiplayer-game-information > p{
     text-align: center;
+    max-width: 70%;
     margin-bottom: 1.5%;
 }
 

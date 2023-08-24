@@ -50,7 +50,7 @@ export default (state) => html `
         <a href="Gamespecific"><img src="${images.anteaterInNature}" alt="game image"></a>
         <a href="Gamespecific"><img src="${images.rocketship}" alt="game image"></a>
         <a href="Gamespecific"><img src="${images.mongooses}" alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.transformer}" alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.skylineEnforcers}" alt="game image"></a>
         <a href="Gamespecific"><img src="${images.bigfoot}" alt="game image"></a>
         <a href="Gamespecific"><img src="${images.volcano}" alt="game image"></a>
         <a href="Gamespecific"><img src="${images.koiFish}" alt="game image"></a>
