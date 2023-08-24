@@ -189,7 +189,7 @@ const gameInformation = [
   },
 
   {
-    "title":"Writing Wraith",
+    "title":"Apple",
     "image":`${images.appleOnDesk}`,
     "description":`Manzana bibendum nisl non neque lobortis, non vulputate nibh luctus.
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
