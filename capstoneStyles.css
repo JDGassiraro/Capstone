@@ -427,6 +427,7 @@ nav{
 
 .multiplayer-game-information > p{
     text-align: center;
+    max-width: 70%;
     margin-bottom: 1.5%;
 }
 

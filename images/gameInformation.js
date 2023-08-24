@@ -5,11 +5,12 @@ const gameInformation = [
     "title": "Anteater Adventures",
     "image": `${images.anteaterInNature}`,
     "description": `Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit. Sed ex nisl, ultricies eu tempor a, sollicitudin nec est. Sed
-    quis feugiat nisi, vitae lacinia sem. Praesent commodo magna eu mattis
-     ornare. Morbi a nunc mattis dolor efficitur feugiat non lacinia est.
+      elit. Sed ex nisl, ultricies eu tempor a, sollicitudin nec est. Sed
+      quis feugiat nisi, vitae lacinia sem. Praesent commodo magna eu mattis
+      ornare. Morbi a nunc mattis dolor efficitur feugiat non lacinia est.
       Aenean blandit, sapien in iaculis faucibus, est turpis commodo lectus,
-      in ultrices leo turpis nec erat.`
+      in ultrices leo turpis nec erat.`,
+    "popularityRating": "week"
   },
 
   {
@@ -22,6 +23,7 @@ const gameInformation = [
 
   {
     "title": "Urban Legends...",
+    "image":`${images.bigfoot}`,
     "description": `Integer sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas
                    lacinia. Phasellus fringilla nulla non sem efficitur imperdiet. Cras semper
                    ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`
@@ -29,22 +31,27 @@ const gameInformation = [
 
   {
     "title":"Backpack Organizer",
+    "image":`${images.books}`,
     "description":`Sed bibendum nisl non neque lobortis, non vulputate nibh luctus.
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
                   fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
-                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`
+                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`,
+      "popularityRating":"week"
   },
 
   {
     "title": "Schedule Maker",
+    "image":`${images.calendar}`,
     "description": `Integer sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas
                    lacinia. Phasellus fringilla nulla non sem efficitur imperdiet. Cras semper
-                   ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`
+                   ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`,
+    "popularityRating": "week"
   },
 
 
   {
     "title":"Ocean Biology",
+    "image":`${images.diverUnderwater}`,
     "description":`Sed bibendum nisl non neque lobortis, non vulputate nibh luctus.
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
                   fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
@@ -60,18 +67,22 @@ const gameInformation = [
   },
 
   {
-    "title": "Schedule Maker",
-    "description": `Penguinis sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas
+    "title": "Codex Penguinis",
+    "image":`${images.handDrawnPenguins}`,
+    "description": `preguntas sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas
                    lacinia. Phasellus fringilla nulla non sem efficitur imperdiet. Cras semper
-                   ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`
+                   ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`,
+      "popularityRating":"week"
   },
 
   {
     "title":"Virtual Horse",
+    "image":`${images.horse}`,
     "description":`Vivamus eget leo quis magna cursus tempus vel ut dui. Donec tincidunt quam
                   at nulla scelerisque, ac pellentesque arcu luctus. In hac habitasse platea
                   dictumst. Suspendisse potenti. Proin id accumsan dolor. Aliquam posuere tortor
-                  eu arcu facilisis ultricies. Pellentesque euismod viverra arcu, at faucibus magna molestie at.`
+                  eu arcu facilisis ultricies. Pellentesque euismod viverra arcu, at faucibus magna molestie at.`,
+    "popularityRating": "week"
   },
 
   {
@@ -91,6 +102,7 @@ const gameInformation = [
 
   {
     "title":"Pond Biology",
+    "image":`${images.koiFish}`,
     "description":`Vivamus eget leo quis magna cursus tempus vel ut dui. Donec tincidunt quam
                   at nulla scelerisque, ac pellentesque arcu luctus. In hac habitasse platea
                   dictumst. Suspendisse potenti. Proin id accumsan dolor. Aliquam posuere tortor
@@ -99,6 +111,7 @@ const gameInformation = [
 
   {
     "title":"Mongoose Family",
+    "image":`${images.mongooses}`,
     "description":`Sed bibendum nisl non neque lobortis, non vulputate nibh luctus.
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
                   fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
@@ -107,11 +120,13 @@ const gameInformation = [
 
   {
     "title": "Whose Mummy is This?",
+    "image":`${images.mummy}`,
     "description": `Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit. Sed ex nisl, ultricies eu tempor a, sollicitudin nec est. Sed
-    quis feugiat nisi, vitae lacinia sem. Morbi a nunc mattis dolor efficitur feugiat non lacinia est.
+      elit. Sed ex nisl, ultricies eu tempor a, sollicitudin nec est. Sed
+      quis feugiat nisi, vitae lacinia sem. Morbi a nunc mattis dolor efficitur feugiat non lacinia est.
       Aenean blandit, sapien in iaculis faucibus, est turpis commodo lectus,
-      in ultrices leo turpis nec erat.`
+      in ultrices leo turpis nec erat.`,
+    "popularity": "week"
   },
 
   {
@@ -146,25 +161,41 @@ const gameInformation = [
 
   {
     "title": "Skyline Enforcers",
+    "image":`${images.skylineEnforcers}`,
     "description": `Integer sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas
                    lacinia. Phasellus fringilla nulla non sem efficitur imperdiet. Cras semper
-                   ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`
+                   ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`,
+      "popularityRating":"week"
   },
 
   {
     "title":"Eruption Science",
+    "image":`${images.volcano}`,
     "description":`Eruptus bibendum nisl non neque lobortis, non vulputate nibh luctus.
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
                   fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
-                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`
+                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`,
+      "popularityRating":"week"
   },
 
   {
     "title":"Writing Wraith",
+    "image":`${images.wraith}`,
     "description":`Sed bibendum nisl non neque lobortis, non vulputate nibh luctus.
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
                   fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
-                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`
+                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`,
+      "popularityRating":"week"
+  },
+
+  {
+    "title":"Writing Wraith",
+    "image":`${images.appleOnDesk}`,
+    "description":`Manzana bibendum nisl non neque lobortis, non vulputate nibh luctus.
+                  Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
+                  fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
+                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`,
+      "popularityRating":"week"
   }
 ];
 
