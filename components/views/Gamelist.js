@@ -74,7 +74,7 @@ export default () => html `<h1>
         <a href="Gamespecific"><img src="${images.books}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.horse}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.calendar}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.transformer}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.skylineEnforcers}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.appleOnDesk}"  alt="game image"></a>
     </div>
 </div>

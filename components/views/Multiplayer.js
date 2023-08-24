@@ -14,7 +14,8 @@ export default (state) => html `<h1>
       <!--Particular Multiplayer Game-->
       <div class="multiplayer-game-information">
             <h2>Game Title</h2>
-            <p>Multiplayer Game Description Multiplayer Game Description Multiplayer Game Description</p>
+            <img src="${images.gameInformation[0].image}" alt="multiplayer game image">
+            <p>${images.gameInformation[0].description}</p>
             <input type="button" value="Play">
       </div>
 
@@ -34,13 +35,10 @@ export default (state) => html `<h1>
         <a href="Gamespecific"><img src="${images.handDrawnPenguins}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.mongooses}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.volcano}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.transformer}"  alt="game image"></a>
+        <a href="Gamespecific"><img src="${images.skylineEnforcers}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.anteaterInNature}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.rocketship}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.horseRace}"  alt="game image"></a>
     </div>
 </div>
-
-
-
 `;
