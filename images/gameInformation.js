@@ -126,11 +126,11 @@ const gameInformation = [
       quis feugiat nisi, vitae lacinia sem. Morbi a nunc mattis dolor efficitur feugiat non lacinia est.
       Aenean blandit, sapien in iaculis faucibus, est turpis commodo lectus,
       in ultrices leo turpis nec erat.`,
-    "popularity": "week"
+    "popularityRating": "week"
   },
 
   {
-    "title":"Far far Away",
+    "title":"Far Far Away",
     "description":`Sed bibendum nisl non neque lobortis, non vulputate nibh luctus.
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
                   fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
