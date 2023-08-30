@@ -27,16 +27,6 @@ export default (state) => html`
     <h3 class="game-section-header">Other Multiplayer Games</h3>
     <div class="game-section-list">
         ${renderWeeklyGames(images.gameInformation)}
-        <!-- <a href="Gamespecific"><img src="${images.mongooses}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.joustingKnights}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.babyForestDragon}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.horseRace}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.koiFish}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.horse}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.nebula}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.snake}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.snowyMountains}"  alt="game image"></a>
-        <a href="Gamespecific"><img src="${images.anteaterInNature}"  alt="game image"></a> -->
     </div>
 </div>
 `;

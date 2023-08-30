@@ -20,8 +20,20 @@ function render(state = store.Home) {
 function afterRender(state) {
   // add menu toggle to bars icon in nav bar
   document.querySelector(".fa-bars").addEventListener("click", () => {
-    document.querySelector("nav > ul").classList.toggle("hidden--mobile")
+    document.querySelector("nav > div").classList.toggle("hidden--mobile")
   });
+if(state.view === "Home"){
+    //displays text on top of a game image when a user mouses over it
+document.querySelector(".game-section-list > a > div > img").addEventListener("mouseover", () => {
+  document.querySelector(".game-section-list > a > div > p").classList.remove("hidden")
+  // document.querySelector(".game-section-list > a > div > p").classList.add(".gsltext-transition")
+})
+
+//removes the text from on top of a game image when a user mouses outside a game image
+document.querySelector(".game-section-list > a > div > img").addEventListener("mouseleave", () => {
+  document.querySelector(".game-section-list > a > div > p").classList.add("hidden")
+})
+}
 
   if(state.view === "Contactus") {
     //CONTACT US FORM STARTS HERE
@@ -65,20 +77,25 @@ function afterRender(state) {
   if (state.view === "Aboutus") {
     //add or remove paragraphs in the About Us Page w/Student Button
     document.querySelector("#student-button").addEventListener("click", () => {
-      document.querySelector("#text-organizer > div:first-child").classList.toggle("hidden");
+      document.querySelector("#text-organizer > div:first-child").classList.toggle("trueHidden");
     })
 
     //add or remove paragraphs in the About Us Page w/Educator Button
     document.querySelector("#educator-button").addEventListener("click", () => {
-      document.querySelector("#text-organizer > div:last-child").classList.toggle("hidden");
+      document.querySelector("#text-organizer > div:last-child").classList.toggle("trueHidden");
     })
   };
 
   if (state.view === "Gamespecific") {
     //add comment button under game specific game page when typing a comment.
     document.querySelector("form > textarea").addEventListener("input", () => {
-      document.querySelector("form > .comment-button").classList.remove("hidden");
+      document.querySelector("form > .comment-button").classList.remove("trueHidden");
     })
+
+    // //reveals comment history once one is sent by the comment button and returned by the database
+    // document.querySelector("comment-record-div > textarea").addEventListener("input", () => {
+    //   document.querySelector(".gs-order-small > comment-record-div > textarea").classList.remove("trueHidden");
+    // })
 
     //COMMENT FORM STARTS HERE
     // Add an event handler for the submit button on the form

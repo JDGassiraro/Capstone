@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita:ital@0;1&display=swap');
 
 :root {
-    --game-list-gap: 1em;
+    --game-list-gap: 1vw;
   }
 
 * {
@@ -35,12 +35,35 @@ body{
 }
 
 .hidden{
+    /* display: none !important; */
+    bottom: -100%;
+}
+
+.trueHidden{
     display: none !important;
 }
 
 nav{
     background-color: #14110f;
     border-bottom: 5px solid #a4c2a5;
+}
+
+.nav-layout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-layout >*{
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+
+.nav-logo > img{
+    height: clamp(150px, 300px, 50px);
+    /*height: clamp(min, max, flexibility)*/
 }
 
 .nav-ul {
@@ -57,12 +80,8 @@ nav{
     background-color:#a4c2a5;
     font-family: 'Roboto-slab', sans-serif;
     padding: 1%;
+    white-space: nowrap;
     border-radius: 15%;
-}
-
-.nav-ul li:first-child{
-    padding: 0%;
-    background-color: #14110f;
 }
 
 .nav-ul li:hover{
@@ -70,24 +89,16 @@ nav{
 }
 
 
-.nav-ul > li:first-child:hover{
-    background-color: #14110f;
-}
-
-
 /* .nav-logo-span{
     display: block;
 } */
 
-.nav-logo, img{
+img{
     width: 100%;
     margin: 0px;
     padding: 0px;
 }
 
-.nav-li{
-    width: 12%;
-}
 .nav-ul a{;
     list-style: none;
     text-decoration: none;
@@ -97,7 +108,7 @@ nav{
 }
 
 .search-div{
-    display: inline-fleX;
+    display: inline-flex;
 }
 
 .nav-search, .search-button{
@@ -160,14 +171,14 @@ nav{
 .grid-image{
     margin: 0%;
     padding: 0%;
-    grid-gap: 10%;
+    gap: 10%;
     object-fit: cover;
     height: 100%;
 }
 
 .grid-image:hover{
     transition: transform 300ms;
-    transform: scale(1.5);
+    transform: scale(1.4);
 }
 
 /*Game Flex  Classes*/
@@ -195,6 +206,29 @@ nav{
     flex-shrink: 0;
     aspect-ratio: 16/9;
     width: calc(20% - var(--game-list-gap));
+}
+
+.game-section-list > a > div{
+    position: relative;
+    overflow: hidden;
+}
+.game-section-list > a > div > p.hidden{
+    bottom: -100%;
+}
+
+.game-section-list > a > div > p{
+    position: absolute;
+    text-align: center;
+    bottom: 0%;
+    padding: 3%;
+    background: linear-gradient(to top, #a4c2a5, rgba(203, 221, 203, 0%));
+    color:#14110f;
+    pointer-events: none;
+    transition: bottom 300ms ease-in-out;
+    left: 0; /*absolute positioning in pixels*/
+    right: 0;
+    /*use this feature in the future for mobile*/
+    /* text-size-adjust: none;*/
 }
 
 /*About Us Classes*/
@@ -395,9 +429,13 @@ nav{
 #comments{
     resize: none;
 }
-.comment-record{
+/* .comment-record-div{
     margin-top: 1%;
     background-color: whitesmoke;
+} */
+
+.comment-record{
+    resize: none;
 }
 
 /*Multiplayer Page*/
@@ -442,6 +480,29 @@ nav{
     cursor: pointer;
 }
 
+@media (max-width: 1024px){
+
+    .nav-layout{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3em;
+    }
+
+    .select-multiplayer-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .select-multiplayer-image{
+        width: 55%;
+    }
+
+    .search-div{
+        margin-bottom: 1vw;
+    }
+}
+
 @media (max-width: 549px){
     :root {
         --game-list-gap: .5em;
@@ -462,15 +523,15 @@ nav{
         font-size:2em;
     }
 
-    nav > ul {
+    .nav-ul {
         display: flex;
         align-items: center;
         flex-direction: column;
         padding: 0 0;
     }
 
-    .nav-ul li:first-child{
-        display: none;
+    .game-section-list a{
+        width: calc(40% - var(--game-list-gap));
     }
 
     #gs-order{

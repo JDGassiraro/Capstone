@@ -18,7 +18,7 @@ export default () => html `
 
 <div id="text-organizer">
       <!--For Students-->
-      <div class="hidden">
+      <div class="trueHidden">
             <h2>Dear Students</h2>
             <p>We are here to back you up. If it's hard for you you to study, study here. If
                you are falling behind in school, catch up here. If you are looking to just relax
@@ -27,7 +27,7 @@ export default () => html `
       </div>
 
       <!--For Teachers-->
-      <div class="hidden">
+      <div class="trueHidden">
             <h2>Dear Educators</h2>
             <p>This site is meant to be a tool to help keep students engaged in their education. We
                personally understand that it can be difficult to keep students engaged in the classroom,
