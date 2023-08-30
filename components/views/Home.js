@@ -32,7 +32,12 @@ The weather in ${state.weather.city} is ${state.weather.description}. Temperatur
 <div class="game-section">
     <h3 class="game-section-header">Most Popular Games this Week</h3>
     <div class="game-section-list">
-        <a href="Gamespecific"><img src="${images.mongooses}"  alt="game image"></a>
+        <a href="Gamespecific">
+            <div>
+            <img src="${images.mongooses}"  alt="game image">
+            <p class="hidden">Mongoose Family</p>
+            </div>
+        </a>
         <a href="Gamespecific"><img src="${images.joustingKnights}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.babyForestDragon}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.horseRace}"  alt="game image"></a>

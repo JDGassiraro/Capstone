@@ -34,10 +34,12 @@ export default (state) => html `
         <form id="comment" method="POST" action="">
             <h3>Send a Comment</h3>
             <label class="textarea-above" for="comments"></label>
-            <textarea name="comments" id="comments" cols="40" rows="10" maxlength="100"></textarea>
-            <input type="submit" class="comment-button hidden" name="comment-button" value="Comment">
+            <textarea name="comments" id="comments" cols="40" rows="5" maxlength="100"></textarea>
+            <input type="submit" class="comment-button trueHidden" name="comment-button" value="Comment">
         </form>
-        <div class=comment-record>${state.commentHistory}</div>
+        <div class=comment-record-div><textarea class="comment-record" cols="40" rows="5" disabled>${state.commentHistory}</textarea></div>
+
+
     </div>
 </div>
 
