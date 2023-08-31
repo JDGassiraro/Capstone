@@ -1,9 +1,7 @@
 import html from "html-literal";
 import * as images from "../../images";
 
-export default () => html `<h1>
-      Game List Page
-</h1>
+export default () => html `
 
 <div class="passive-banner-image-div">
       <!--Banner Image-->

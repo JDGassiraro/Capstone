@@ -3,7 +3,6 @@ import html from "html-literal";
 import * as images from "../../images";
 
 export default (state) => html `
-<h1>Game Specific Page</h1>
 
 <!--Game Image-->
 <div class="gs-image-div">
@@ -34,7 +33,7 @@ export default (state) => html `
         <form id="comment" method="POST" action="">
             <h3>Send a Comment</h3>
             <label class="textarea-above" for="comments"></label>
-            <textarea name="comments" id="comments" cols="40" rows="5" maxlength="100"></textarea>
+            <textarea name="comments" id="comments" cols="40" rows="5" maxlength="100" placeholder="Type your comment here..."></textarea>
             <input type="submit" class="comment-button trueHidden" name="comment-button" value="Comment">
         </form>
         <div class=comment-record-div><textarea class="comment-record" cols="40" rows="5" disabled>${state.commentHistory}</textarea></div>

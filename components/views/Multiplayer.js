@@ -10,7 +10,6 @@ const renderWeeklyGames = (gameInformation) => {
 };
 
 export default (state) => html`
-<h1>Multiplayer Page</h1>
 
 <div class="select-multiplayer-container">
     <div class="select-multiplayer-image">

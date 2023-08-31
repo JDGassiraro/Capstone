@@ -3,9 +3,8 @@ import stockURL from "/images/gameImages/diverUnderwater.jpg";
 import * as images from "../../images";
 
 
-export default () => html `<h1>
-      Lesson Planner Page
-</h1>
+export default () => html `
+
 <div class="passive-banner-image-div">
       <img class="passive-banner-image" src="${images.appleOnDesk}" alt="banner image">
 
