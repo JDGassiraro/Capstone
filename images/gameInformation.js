@@ -15,10 +15,12 @@ const gameInformation = [
 
   {
     "title":"Dragon Forest",
+    "image": `${images.babyForestDragon}`,
     "description":`Sed bibendum nisl non neque lobortis, non vulputate nibh luctus.
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
                   fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
-                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`
+                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`,
+    "featured": `true`
   },
 
   {
@@ -26,7 +28,8 @@ const gameInformation = [
     "image":`${images.bigfoot}`,
     "description": `Integer sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas
                    lacinia. Phasellus fringilla nulla non sem efficitur imperdiet. Cras semper
-                   ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`
+                   ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`,
+    "featured": `true`
   },
 
   {
@@ -45,7 +48,8 @@ const gameInformation = [
     "description": `Integer sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas
                    lacinia. Phasellus fringilla nulla non sem efficitur imperdiet. Cras semper
                    ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`,
-    "popularityRating": "week"
+    "popularityRating": "week",
+    "featured": `true`
   },
 
 
@@ -59,11 +63,22 @@ const gameInformation = [
   },
 
   {
-    "title":"Pond Biology",
+    "title":"Frog Biology",
+    "image": `${images.guitarFrog}`,
     "description":`Vivamus eget leo quis magna cursus tempus vel ut dui. Donec tincidunt quam
                   at nulla scelerisque, ac pellentesque arcu luctus. In hac habitasse platea
                   dictumst. Suspendisse potenti. Proin id accumsan dolor. Aliquam posuere tortor
-                  eu arcu facilisis ultricies. Pellentesque euismod viverra arcu, at faucibus magna molestie at.`
+                  eu arcu facilisis ultricies. Pellentesque euismod viverra arcu, at faucibus magna molestie at.`,
+                  "featured": `true`
+  },
+
+  {
+    "title":"King of the Sand",
+    "image": `${images.desertCastle}`,
+    "description":`Sed bibendum nisl non neque lobortis, non vulputate nibh luctus.
+                  Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
+                  fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
+                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`
   },
 
   {
@@ -72,7 +87,17 @@ const gameInformation = [
     "description": `preguntas sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas
                    lacinia. Phasellus fringilla nulla non sem efficitur imperdiet. Cras semper
                    ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`,
-      "popularityRating":"week"
+      "popularityRating":"week",
+      "featured": `true`
+  },
+
+  {
+    "title":"Thrill Ride",
+    "image":`${images.sportsCar}`,
+    "description":`Sed bibendum nisl non neque lobortis, non vulputate nibh luctus.
+                  Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
+                  fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
+                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`
   },
 
   {
@@ -87,17 +112,30 @@ const gameInformation = [
 
   {
     "title": "Derby",
+    "image": `${images.horseRace}`,
     "description": `Integer sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas
                    lacinia. Phasellus fringilla nulla non sem efficitur imperdiet. Cras semper
                    ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`
   },
 
   {
+    "title":"Catch of the Day",
+    "image":`${images.colorfulBird}`,
+    "description":`Vivamus eget leo quis magna cursus tempus vel ut dui. Donec tincidunt quam
+                  at nulla scelerisque, ac pellentesque arcu luctus. In hac habitasse platea
+                  dictumst. Suspendisse potenti. Proin id accumsan dolor. Aliquam posuere tortor
+                  eu arcu facilisis ultricies. Pellentesque euismod viverra arcu, at faucibus magna molestie at.`,
+    "popularityRating": "week"
+  },
+
+  {
     "title":"Tilted",
+    "image": `${images.joustingKnights}`,
     "description":`Sed bibendum nisl non neque lobortis, non vulputate nibh luctus.
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
                   fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
-                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`
+                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`,
+    "featured": `true`
   },
 
   {
@@ -131,32 +169,40 @@ const gameInformation = [
 
   {
     "title":"Far Far Away",
+    "image": `${images.nebula}`,
     "description":`Sed bibendum nisl non neque lobortis, non vulputate nibh luctus.
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
                   fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
-                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`
+                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`,
+    "featured": `true`
   },
 
   {
     "title": "Rocket Maker",
+    "image": `${images.rocketship}`,
     "description": `Integer sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas
                    lacinia. Phasellus fringilla nulla non sem efficitur imperdiet. Cras semper
-                   ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`
+                   ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`,
+    "featured": `true`
   },
 
   {
     "title": "Snake Catcher",
+    "image": `${images.snake}`,
     "description": `Integer sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas
                    lacinia. Phasellus fringilla nulla non sem efficitur imperdiet. Cras semper
-                   ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`
+                   ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`,
+    "featured": `true`
   },
 
   {
     "title":"Alpine Adventure",
+    "image": `${images.snowyMountains}`,
     "description":`Sed bibendum nisl non neque lobortis, non vulputate nibh luctus.
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
                   fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
-                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`
+                  sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`,
+    "featured": `true`
   },
 
   {
@@ -165,7 +211,8 @@ const gameInformation = [
     "description": `Integer sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas
                    lacinia. Phasellus fringilla nulla non sem efficitur imperdiet. Cras semper
                    ipsum sed maximus tempor. Vivamus in risus laoreet, eleifend ipsum et, fermentum odio.`,
-      "popularityRating":"week"
+      "popularityRating":"week",
+      "featured": `true`
   },
 
   {
@@ -175,7 +222,8 @@ const gameInformation = [
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
                   fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
                   sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`,
-      "popularityRating":"week"
+      "popularityRating":"week",
+      "featured": `true`
   },
 
   {
@@ -185,7 +233,8 @@ const gameInformation = [
                   Phasellus fringilla consequat turpis sit amet dictum. Donec feugiat
                   fermentum dignissim. Maecenas vitae semper felis. Nulla facilisi. Integer
                   sollicitudin sed lectus vitae tempus. Donec commodo leo in ipsum egestas lacinia.`,
-      "popularityRating":"week"
+      "popularityRating":"week",
+      "featured": `true`
   },
 
   {

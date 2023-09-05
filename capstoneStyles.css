@@ -209,6 +209,14 @@ img{
     width: calc(20% - var(--game-list-gap));
 }
 
+.flex-image{
+    margin: 0%;
+    padding: 0%;
+    gap: 10%;
+    object-fit: cover;
+    height: 100%;
+}
+
 .game-section-list > a > div{
     position: relative;
     overflow: hidden;

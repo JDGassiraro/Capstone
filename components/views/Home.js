@@ -34,11 +34,18 @@ The weather in ${state.weather.city} is ${state.weather.description}. Temperatur
     <div class="game-section-list">
         <a href="Gamespecific">
             <div>
-            <img src="${images.mongooses}"  alt="game image">
-            <p class="hidden">Mongoose Family</p>
+                <img src="${images.gameInformation[9].image}"  alt="game image">
+                <p class="hidden">${images.gameInformation[9].title}</p>
             </div>
         </a>
-        <a href="Gamespecific"><img src="${images.joustingKnights}"  alt="game image"></a>
+        <a href="Gamespecific">
+            <div>
+                <!-- class="flex-image"  -->
+                <img src="${images.gameInformation[13].image}"  alt="game image">
+                <p class="hidden">${images.gameInformation[13].title}</p>
+            </div>
+
+        </a>
         <a href="Gamespecific"><img src="${images.babyForestDragon}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.horseRace}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.koiFish}"  alt="game image"></a>
