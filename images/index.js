@@ -3,6 +3,8 @@ export {default as anteaterInNature} from "./gameImages/anteaterInNature.png";
 export {default as babyForestDragon} from "./gameImages/babyForestDragon.png";
 export {default as bigfoot} from "./gameImages/bigfoot.png";
 export {default as books} from "./gameImages/books.png";
+export {default as colorfulBird} from "./gameImages/colorfulBird.jpg";
+export {default as desertCastle} from "./gameImages/desertCastle.jpg";
 export {default as calendar} from "./gameImages/calendar.png";
 export {default as diverUnderwater} from "./gameImages/diverUnderwater.jpg";
 export {default as guitarFrog} from "./gameImages/guitarFrog.png";
@@ -18,6 +20,7 @@ export {default as rocketship} from "./gameImages/rocketship.png";
 export {default as snake} from "./gameImages/snake.png";
 export {default as snowyMountains} from "./gameImages/snowyMountains.png";
 export {default as skylineEnforcers} from "./gameImages/skylineEnforcers.png";
+export {default as sportsCar} from "./gameImages/sportsCar.jpg";
 export {default as volcano} from "./gameImages/volcano.png";
 export {default as wraith} from "./gameImages/wraith.png";
 //educationImages

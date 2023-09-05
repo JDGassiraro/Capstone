@@ -1,7 +1,19 @@
 import html from "html-literal";
 import * as images from "../../images";
 
-export default () => html `
+const showAllGames = (gameInformation) => {
+      return gameInformation
+          .map(game => html`<a href="Gamespecific">
+                               <!-- class ="flex-image-div" -->
+                              <div>
+                                    <!-- class="flex-image" -->
+                                    <img src="${game.image}" alt="${game.title}">
+                                    <p class="hidden">${game.title}</p>
+                              </div>
+                            </a>`).join('');
+};
+
+export default (state) => html `
 
 <div class="passive-banner-image-div">
       <!--Banner Image-->
@@ -14,7 +26,7 @@ export default () => html `
             <!--Search Bar-->
             <div class="search-div">
             <label class="nav-search" for="nav-search"></label>
-            <input class="search-field" type="search" id="nav-search" placeholder="Search the Site" name="qu" maxlength = 30>
+            <input class="search-field" type="search" id="gamelist-search" placeholder="Search the Site" name="qu" maxlength = 30>
             <input class="search-button" type="button" value="Search">
             </div>
 
@@ -74,6 +86,13 @@ export default () => html `
         <a href="Gamespecific"><img src="${images.calendar}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.skylineEnforcers}"  alt="game image"></a>
         <a href="Gamespecific"><img src="${images.appleOnDesk}"  alt="game image"></a>
+    </div>
+</div>
+
+<div class="game-section">
+    <h3 class="game-section-header">All Games on Brain Wave Games</h3>
+    <div class="game-section-list">
+      ${showAllGames(images.gameInformation)}
     </div>
 </div>
 
