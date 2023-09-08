@@ -1,13 +1,6 @@
 import html from "html-literal";
 import * as images from "../../images";
-
-// This function will render all the images with a popularityRating of 'week'
-const renderWeeklyGames = (gameInformation) => {
-    return gameInformation
-        .filter(game => game.popularityRating === "week")
-        .map(game => html`<a href="Gamespecific"><img src="${game.image}" alt="${game.popularityRating}"></a>`)
-        .join('');
-};
+import {renderWeeklyGames} from "../../utility/games";
 
 export default (state) => html`
 

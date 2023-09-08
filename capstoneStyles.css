@@ -40,7 +40,12 @@ body{
 }
 
 .trueHidden{
-    display: none !important;
+    display: none;
+}
+
+.image-title{
+    display: none;
+    opacity: 0;
 }
 
 nav{
@@ -201,38 +206,35 @@ img{
  padding: .5%; */
 }
 
+.game-section-list > *{
+    /* flex-grow, flex-shrink, flex-basis; */
+    flex: 0 0 calc(20% - var(--game-list-gap));
+}
+
 .game-section-list a{
     display: flex;
-    flex-grow: 1;
-    flex-shrink: 0;
+    /* flex-grow: 1;
+    flex-shrink: 0;  */
     aspect-ratio: 16/9;
-    width: calc(20% - var(--game-list-gap));
-}
-
-.flex-image{
-    margin: 0%;
-    padding: 0%;
-    gap: 10%;
-    object-fit: cover;
-    height: 100%;
-}
-
-.game-section-list > a > div{
+    /* width: calc(20% - var(--game-list-gap)); */
     position: relative;
     overflow: hidden;
 }
-.game-section-list > a > div > p.hidden{
-    bottom: -100%;
+.game-section-list a:hover p{
+    display: block;
+    bottom: 0;
 }
 
-.game-section-list > a > div > p{
+.game-section-list > a > p{
     position: absolute;
+    z-index: 999;
     text-align: center;
-    bottom: 0%;
+    bottom: -100%;
     padding: 3%;
     background: linear-gradient(to top, #a4c2a5, rgba(203, 221, 203, 0%));
     color:#14110f;
     pointer-events: none;
+    opacity: 1;
     transition: bottom 300ms ease-in-out;
     left: 0; /*absolute positioning in pixels*/
     right: 0;

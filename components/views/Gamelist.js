@@ -5,11 +5,11 @@ const showAllGames = (gameInformation) => {
       return gameInformation
           .map(game => html`<a href="Gamespecific">
                                <!-- class ="flex-image-div" -->
-                              <div>
+                              <!-- <div> -->
                                     <!-- class="flex-image" -->
                                     <img src="${game.image}" alt="${game.title}">
-                                    <p class="hidden">${game.title}</p>
-                              </div>
+                                    <p class="game-title">${game.title}</p>
+                              <!-- </div> -->
                             </a>`).join('');
 };
 
