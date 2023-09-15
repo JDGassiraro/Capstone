@@ -26,7 +26,7 @@ export default (links) => html ` <nav>
             <label class="nav-search" for="nav-search"></label>
             <input class="search-field" type="search" id="nav-search" placeholder="Search the Site" name="qu" maxlength = 30>
             <!-- <button onclick="selectText()"><input class="search-button" type="button" value="Search"></button> -->
-            <a href="#"><input class="search-button" type="button" value="Search"></a>
+            <input class="search-button" id="search-button" type="button" value="Search">
             <!-- selectText(input) -->
     </div>
 </div>

@@ -23,6 +23,18 @@ function afterRender(state) {
     document.querySelector("nav > div").classList.toggle("hidden--mobile")
   });
 
+  //allows the search bar to collect the values when the user presses the search button
+  document.querySelector("#search-button").addEventListener("click", (event) => {
+    let navTextBox = document.querySelector("#nav-search");
+    let navQueryText = navTextBox.value;
+
+    store.Results.searchString = navQueryText;
+
+    // console.log(store.Results);
+    router.navigate("/Results");
+  })
+
+
   if(state.view === "Contactus") {
     //CONTACT US FORM STARTS HERE
     // Add an event handler for the submit button on the form
