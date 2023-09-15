@@ -5,4 +5,5 @@ export {default as Home} from "./Home";
 export {default as Lessonplanner} from "./Lessonplanner";
 export {default as Multiplayer} from "./Multiplayer";
 export {default as Aboutus} from "./Aboutus";
+export {default as Results} from "./Results";
 export {default as Links} from "./Links";

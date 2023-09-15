@@ -5,5 +5,6 @@ export default [
   { title: "Contactus", text: "Contact Us" },
   //{ title: "Gamespecific", text: "Specific Game" },
   { title: "Lessonplanner", text: "Lesson Planner" },
-  { title: "Aboutus", text: "About Us" }
+  { title: "Aboutus", text: "About Us" },
+  // { title: "Results", text: "Results" }
 ];

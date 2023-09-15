@@ -23,18 +23,6 @@ function afterRender(state) {
     document.querySelector("nav > div").classList.toggle("hidden--mobile")
   });
 
-if(state.view === "Home" || state.view === "Gamelist"){
-    //displays text on top of a game image when a user mouses over it
-document.querySelector(".game-section-list > a > div img").addEventListener("mouseover", () => {
-  document.querySelector(".game-section-list > a > div  p").classList.remove("hidden")
-})
-
-//removes the text from on top of a game image when a user mouses outside a game image
-document.querySelector(".game-section-list > a > div img").addEventListener("mouseleave", () => {
-  document.querySelector(".game-section-list > a > div  p").classList.add("hidden")
-})
-}
-
   if(state.view === "Contactus") {
     //CONTACT US FORM STARTS HERE
     // Add an event handler for the submit button on the form
