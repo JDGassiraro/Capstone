@@ -1,17 +1,6 @@
 import html from "html-literal";
 import * as images from "../../images";
-
-const showAllGames = (gameInformation) => {
-      return gameInformation
-          .map(game => html`<a href="Gamespecific">
-                               <!-- class ="flex-image-div" -->
-                              <div>
-                                    <!-- class="flex-image" -->
-                                    <img src="${game.image}" alt="${game.title}">
-                                    <p class="hidden">${game.title}</p>
-                              </div>
-                            </a>`).join('');
-};
+import { showAllGames } from "../../utility/games";
 
 export default (state) => html `
 

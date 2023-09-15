@@ -33,17 +33,13 @@ The weather in ${state.weather.city} is ${state.weather.description}. Temperatur
     <h3 class="game-section-header">Most Popular Games this Week</h3>
     <div class="game-section-list">
         <a href="Gamespecific">
-            <div>
                 <img src="${images.gameInformation[9].image}"  alt="game image">
-                <p class="hidden">${images.gameInformation[9].title}</p>
-            </div>
+                <p class="game-title">${images.gameInformation[9].title}</p>
         </a>
         <a href="Gamespecific">
-            <div>
                 <!-- class="flex-image"  -->
                 <img src="${images.gameInformation[13].image}"  alt="game image">
-                <p class="hidden">${images.gameInformation[13].title}</p>
-            </div>
+                <p class="game-title">${images.gameInformation[13].title}</p>
 
         </a>
         <a href="Gamespecific"><img src="${images.babyForestDragon}"  alt="game image"></a>

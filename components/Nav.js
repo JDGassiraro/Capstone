@@ -1,6 +1,8 @@
 import html from "html-literal";
 import logoURL from "../images/logoDesigns/workingLogo.png";
 console.log(logoURL);
+import  {selectText}  from "../utility/games";
+
 export default (links) => html ` <nav>
 <i class="fas fa-bars"></i>
 <div class="nav-layout hidden--mobile">
@@ -23,7 +25,11 @@ export default (links) => html ` <nav>
     <div class="search-div">
             <label class="nav-search" for="nav-search"></label>
             <input class="search-field" type="search" id="nav-search" placeholder="Search the Site" name="qu" maxlength = 30>
-            <input class="search-button" type="button" value="Search">
+            <!-- <button onclick="selectText()"><input class="search-button" type="button" value="Search"></button> -->
+            <a href="#"><input class="search-button" type="button" value="Search"></a>
+            <!-- selectText(input) -->
     </div>
 </div>
-</nav>`;
+</nav>
+
+`;
