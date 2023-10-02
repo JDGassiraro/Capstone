@@ -30,48 +30,11 @@ function afterRender(state) {
 
     store.Results.searchString = navQueryText;
 
-    // console.log(store.Results);
+    //directs the user the results page
     router.navigate("/Results");
   })
 
-
-  if(state.view === "Contactus") {
-    //CONTACT US FORM STARTS HERE
-    // Add an event handler for the submit button on the form
-    const contactForm = document.querySelector("form");
-    contactForm.addEventListener("submit", event => {
-      event.preventDefault();
-
-      // Get the form element
-      const inputList = event.target.elements;
-      console.log("Input Element List", inputList);
-
-      // Create a request body object to send to the API
-      const requestData = {
-        name: inputList.name.value,
-        email: inputList.email.value,
-        feedbackType: inputList.feedback.value,
-        subject: inputList.subject.value,
-        message: inputList.msg.value
-      };
-      // Log the request body to the console
-      console.log("request Body", requestData);
-
-      axios
-        // Make a POST request to the API to create a new comment
-        .post(`${process.env.CAPSTONE_API_URL}/contactForms`, requestData)
-        .then(response => {
-          console.log(response.data);
-          //wipes the current comment from the textarea elements
-          contactForm.reset();
-          //TEXT SAYING THANK YOU?
-          // router.navigate("/Contactus");
-        })
-        // If there is an error log it to the console
-        .catch(error => {
-          console.log("It puked", error);
-        });
-    });
+  if(state.view === "Results"){
   }
 
   if (state.view === "Aboutus") {
@@ -92,10 +55,44 @@ function afterRender(state) {
       document.querySelector("form > .comment-button").classList.remove("trueHidden");
     })
 
-    // //reveals comment history once one is sent by the comment button and returned by the database
-    // document.querySelector("comment-record-div > textarea").addEventListener("input", () => {
-    //   document.querySelector(".gs-order-small > comment-record-div > textarea").classList.remove("trueHidden");
-    // })
+    if(state.view === "Contactus") {
+      //CONTACT US FORM STARTS HERE
+      // Add an event handler for the submit button on the form
+      const contactForm = document.querySelector("form");
+      contactForm.addEventListener("submit", event => {
+        event.preventDefault();
+
+        // Get the form element
+        const inputList = event.target.elements;
+        console.log("Input Element List", inputList);
+
+        // Create a request body object to send to the API
+        const requestData = {
+          name: inputList.name.value,
+          email: inputList.email.value,
+          feedbackType: inputList.feedback.value,
+          subject: inputList.subject.value,
+          message: inputList.msg.value
+        };
+      // Log the request body to the console
+      console.log("request Body", requestData);
+
+        axios
+          // Make a POST request to the API to create a new comment
+          .post(`${process.env.CAPSTONE_API_URL}/contactForms`, requestData)
+          .then(response => {
+            console.log(response.data);
+            //wipes the current comment from the textarea elements
+            contactForm.reset();
+            //TEXT SAYING THANK YOU?
+            // router.navigate("/Contactus");
+          })
+          // If there is an error log it to the console
+          .catch(error => {
+            console.log("It puked", error);
+          });
+      });
+    }
 
     //COMMENT FORM STARTS HERE
     // Add an event handler for the submit button on the form
@@ -130,7 +127,6 @@ function afterRender(state) {
         });
     });
   }
-
 }
 
 router.hooks({
