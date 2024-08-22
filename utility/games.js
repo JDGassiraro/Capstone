@@ -3,6 +3,8 @@ import * as store from "../store";
 
 //checks to see if the search string is equal to a game title
 export const confirmSearchResults = (gameInformation, searchString) => {
+
+
     if(gameInformation.title !== searchString){
         document.querySelector("#resultPositive").classList.toggle("trueHidden");
         document.querySelector("#negativePositive").classList.toggle("trueHidden");

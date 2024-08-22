@@ -34,7 +34,7 @@ function afterRender(state) {
     router.navigate("/Results");
   })
 
-  if(state.view === "Results"){
+  if(state.view === "Results"){z
   }
 
   if (state.view === "Aboutus") {
